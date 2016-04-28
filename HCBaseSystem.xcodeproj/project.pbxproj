@@ -659,7 +659,6 @@
 		11ED411A1CC72A3E00561E33 /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				11ED41251CC72A5E00561E33 /* UMSocial_Sdk_4.3 */,
 				11ED41281CC72A5E00561E33 /* UMSocial_Sdk_4.4 */,
 				11ED41431CC72A5E00561E33 /* UMSocial_Sdk_Extra_Frameworks */,
 				11ED411B1CC72A3E00561E33 /* UMShareObject.h */,
@@ -668,29 +667,6 @@
 				11ED42621CC8B6A700561E33 /* CMD_LogEvent.m */,
 			);
 			path = Share;
-			sourceTree = "<group>";
-		};
-		11ED41251CC72A5E00561E33 /* UMSocial_Sdk_4.3 */ = {
-			isa = PBXGroup;
-			children = (
-				11ED41261CC72A5E00561E33 /* Header */,
-				11ED41271CC72A5E00561E33 /* SocialSDKXib */,
-			);
-			path = UMSocial_Sdk_4.3;
-			sourceTree = "<group>";
-		};
-		11ED41261CC72A5E00561E33 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
-		11ED41271CC72A5E00561E33 /* SocialSDKXib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SocialSDKXib;
 			sourceTree = "<group>";
 		};
 		11ED41281CC72A5E00561E33 /* UMSocial_Sdk_4.4 */ = {
