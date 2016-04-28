@@ -22,17 +22,22 @@
 #import "CMD_LogEvent.h"
 #import "CMD_LogEvent.h"
 
-#import "UMSocialControllerService.h"
-#import "UMSocial.h"
+#import <UMengSocial/UMSocial.h>
+#import <UMengSocial/UMSocialQQHandler.h>
+#import <UMengSocial/UMSocialSinaSSOHandler.h>
+#import <UMengSocial/UMSocialWechatHandler.h>
 
-#import "UMSocialSinaSSOHandler.h"
+//#import "UMSocialControllerService.h"
+//#import "UMSocial.h"
 
-#import "UMSocialWechatHandler.h"
-#import "UMSocialQQHandler.h"
+//#import "UMSocialSinaSSOHandler.h"
+
+//#import "UMSocialWechatHandler.h"
+//#import "UMSocialQQHandler.h"
 //#import "UMSocialSinaHandler.h"
 //#import "UMSocialTencentWeiboHandler.h"
 //#import "UMSocialRenrenHandler.h"
-#import "UMSocialQQHandler.h"
+//#import "UMSocialQQHandler.h"
 
 
 @interface UMShareObject ()<UIActionSheetDelegate,UMSocialUIDelegate,UMSocialDataDelegate>
