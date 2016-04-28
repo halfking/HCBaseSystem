@@ -181,6 +181,10 @@
 		11EFDE721CD1F37200DD2225 /* hcbasesystemrelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE671CD1F37200DD2225 /* hcbasesystemrelease.xcconfig */; };
 		11EFDE731CD1F37200DD2225 /* hcbasesystemshare.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE681CD1F37200DD2225 /* hcbasesystemshare.xcconfig */; };
 		11EFDE741CD1F37200DD2225 /* hcbasesystemshare.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE681CD1F37200DD2225 /* hcbasesystemshare.xcconfig */; };
+		11EFDE831CD24F1200DD2225 /* UIMLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 11EFDE7B1CD24F1200DD2225 /* UIMLabel.h */; };
+		11EFDE841CD24F1200DD2225 /* UIMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EFDE7C1CD24F1200DD2225 /* UIMLabel.m */; };
+		11EFDE851CD24F1200DD2225 /* UIMLabelEx.h in Headers */ = {isa = PBXBuildFile; fileRef = 11EFDE7D1CD24F1200DD2225 /* UIMLabelEx.h */; };
+		11EFDE861CD24F1200DD2225 /* UIMLabelEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EFDE7E1CD24F1200DD2225 /* UIMLabelEx.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -356,6 +360,10 @@
 		11EFDE661CD1F37200DD2225 /* hcbasesystemdebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = hcbasesystemdebug.xcconfig; sourceTree = "<group>"; };
 		11EFDE671CD1F37200DD2225 /* hcbasesystemrelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = hcbasesystemrelease.xcconfig; sourceTree = "<group>"; };
 		11EFDE681CD1F37200DD2225 /* hcbasesystemshare.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = hcbasesystemshare.xcconfig; sourceTree = "<group>"; };
+		11EFDE7B1CD24F1200DD2225 /* UIMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMLabel.h; sourceTree = "<group>"; };
+		11EFDE7C1CD24F1200DD2225 /* UIMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMLabel.m; sourceTree = "<group>"; };
+		11EFDE7D1CD24F1200DD2225 /* UIMLabelEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMLabelEx.h; sourceTree = "<group>"; };
+		11EFDE7E1CD24F1200DD2225 /* UIMLabelEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMLabelEx.m; sourceTree = "<group>"; };
 		4029536941EE2CA04EA592CE /* libPods-HCBaseSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HCBaseSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		809DFF524B405303DE4B10BD /* Pods-HCBaseSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCBaseSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCBaseSystem/Pods-HCBaseSystem.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -626,6 +634,10 @@
 		11ED437E1CC92CFA00561E33 /* UIControls */ = {
 			isa = PBXGroup;
 			children = (
+				11EFDE7B1CD24F1200DD2225 /* UIMLabel.h */,
+				11EFDE7C1CD24F1200DD2225 /* UIMLabel.m */,
+				11EFDE7D1CD24F1200DD2225 /* UIMLabelEx.h */,
+				11EFDE7E1CD24F1200DD2225 /* UIMLabelEx.m */,
 				11ED437F1CC92CFA00561E33 /* HPGrowingTextView.h */,
 				11ED43801CC92CFA00561E33 /* HPGrowingTextView.m */,
 				11ED43811CC92CFA00561E33 /* HPTextViewInternal.h */,
@@ -706,6 +718,7 @@
 				11ED41B01CC72B9400561E33 /* CMD_GetUserInfo.h in Headers */,
 				11ED409A1CC7237300561E33 /* HCSysRights.h in Headers */,
 				11ED40A21CC7237300561E33 /* HCUserSummary.h in Headers */,
+				11EFDE851CD24F1200DD2225 /* UIMLabelEx.h in Headers */,
 				11ED40A71CC7237300561E33 /* UserInformation.h in Headers */,
 				11ED410B1CC7285C00561E33 /* UDInfo.h in Headers */,
 				11ED41B81CC72B9400561E33 /* CMD_SetUserInfo.h in Headers */,
@@ -722,6 +735,7 @@
 				11ED42471CC89D8A00561E33 /* HXNetwork.h in Headers */,
 				11ED42501CC89D8A00561E33 /* VDCManager(Helper).h in Headers */,
 				11ED42521CC89D8A00561E33 /* VDCManager(LocalFiles).h in Headers */,
+				11EFDE831CD24F1200DD2225 /* UIMLabel.h in Headers */,
 				11ED425A1CC89D8A00561E33 /* VDCTempFileManager.h in Headers */,
 				11ED42451CC89D8A00561E33 /* HttpVideoFileResponse.h in Headers */,
 				11ED426F1CC8BF8800561E33 /* QTimespan.h in Headers */,
@@ -936,6 +950,7 @@
 				11ED43A21CC92CFA00561E33 /* UIPlaceHolderTextField.m in Sources */,
 				11ED409D1CC7237300561E33 /* HCUserConcern.m in Sources */,
 				11ED42091CC7325E00561E33 /* HCMessageItem.m in Sources */,
+				11EFDE861CD24F1200DD2225 /* UIMLabelEx.m in Sources */,
 				11ED43A41CC92CFA00561E33 /* UIPlaceHolderTextView.m in Sources */,
 				11ED410A1CC7285C00561E33 /* CMD_GetUploadToken.m in Sources */,
 				11ED41D91CC72BD300561E33 /* HCCallResultForWT.m in Sources */,
@@ -960,6 +975,7 @@
 				11ED409B1CC7237300561E33 /* HCSysRights.m in Sources */,
 				11ED42461CC89D8A00561E33 /* HttpVideoFileResponse.m in Sources */,
 				11ED420B1CC7325E00561E33 /* HCTransferItem.m in Sources */,
+				11EFDE841CD24F1200DD2225 /* UIMLabel.m in Sources */,
 				11ED42291CC73CBB00561E33 /* Cover.m in Sources */,
 				11ED42131CC7333E00561E33 /* CMDLog.m in Sources */,
 				11ED42571CC89D8A00561E33 /* VDCTempFileInfo.m in Sources */,
@@ -1062,7 +1078,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1104,7 +1120,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1133,7 +1149,7 @@
 				);
 				INFOPLIST_FILE = HCBaseSystem/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1171,7 +1187,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = HCBaseSystem/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

@@ -129,8 +129,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PublicValues.h"
-#import "CommonUtil.h"
+#import <hccoren/base.h>
+
 #import <mach/mach.h>
 #import <Foundation/Foundation.h>
 

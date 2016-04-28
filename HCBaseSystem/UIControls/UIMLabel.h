@@ -58,7 +58,8 @@
 //titleSize = [label size:nil autoFill:YES];
 
 #import <UIKit/UIKit.h>
-#import "PublicValues.h"
+#import <hccoren/base.h>
+
 
 @interface UIMLabel : UIView
 {

@@ -7,9 +7,13 @@
 //
 
 #import "UIMLabelEx.h"
-#import "RegexKitLite.h"
-#import "JSON.h"
+#import <hccoren/base.h>
+#import <hccoren/JSON.h>
 //#import "RegExCategories.h"
+
+#define  FONT_DEFAULT @"ArialMT"
+#define COLOR_DEFAULT UIColorFromRGB(0x277bdd)
+
 
 @implementation UIMLabelEx
 @synthesize fontName,fontSize,minFontSize;
@@ -45,7 +49,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        fontName = PP_RETAIN(FONT_TEXT);
+        fontName = PP_RETAIN(FONT_DEFAULT);
         fontSize = 15;
         minFontSize = 6;
         numberOfLines = 1;
@@ -92,7 +96,7 @@
             //            lineHeight = lastSize + lineDiffMin;
             if([text isEqualToString:@"Tomorrow"])
             {
-                DLog(@"begin track...");
+                NSLog(@"begin track...");
             }
         }
         needChange = [self buildText:self.text
@@ -260,7 +264,7 @@
                                                             range:NSMakeRange(0, text.length) error:&error];
     if(temp==nil)
     {
-        DLog(@"match error:%@",[error description]);
+        NSLog(@"match error:%@",[error description]);
     }
     else
     {
@@ -295,7 +299,7 @@
                                                                               error:&error];
                 if(!attrsTemp)
                 {
-                    DLog(@"match error:%@",[error description]);
+                    NSLog(@"match error:%@",[error description]);
                 }
                 else
                 {
@@ -350,11 +354,11 @@
                             if(textColor)
                                 [seg setObject:textColor forKey:@"fontcolor"];
                             else
-                                [seg setObject:COLOR_D forKey:@"fontcolor"];
+                                [seg setObject:COLOR_DEFAULT forKey:@"fontcolor"];
                         }
                         if(!hasName)
                         {
-                            [seg setObject:self.fontName?self.fontName:FONT_TEXT forKey:@"fontname"];
+                            [seg setObject:self.fontName?self.fontName:FONT_DEFAULT forKey:@"fontname"];
                         }
                         if(!hasSize)
                         {
@@ -383,13 +387,13 @@
                                                      error:&error];
     if(error)
     {
-        DLog(@"error:%@",error);
+        NSLog(@"error:%@",error);
     }
     if(temp && temp.count>0)
     {
         //        NSString * colorValue =  [(RxMatchGroup*)[temp objectAtIndex:0] value];
         NSString * colorValue =  [temp objectAtIndex:0];
-        DLog(@"colorValue:%@",colorValue);
+        NSLog(@"colorValue:%@",colorValue);
         //        if(colorValue.length==3)
         //        {
         //
@@ -410,71 +414,73 @@
             
             //            NSString * colorString = [[(RxMatchGroup*)[temp objectAtIndex:0]value]lowercaseString];
             NSString * colorString = [[temp objectAtIndex:0]lowercaseString];
-            if([colorString isEqualToString:@"color_a"])
-                return COLOR_A;
-            else if([colorString isEqualToString:@"color_b"])
-                return COLOR_B;
-            else if([colorString isEqualToString:@"color_c"])
-                return COLOR_C;
-            else if([colorString isEqualToString:@"color_d"])
-                return COLOR_D;
-            else if([colorString isEqualToString:@"color_e"])
-                return COLOR_E;
-            else if([colorString isEqualToString:@"color_f"])
-                return COLOR_F;
-            else if([colorString isEqualToString:@"color_g"])
-                return COLOR_G;
-            else if([colorString isEqualToString:@"color_h"])
-                return COLOR_H;
-            else if([colorString isEqualToString:@"color_i"])
-                return COLOR_I;
-            else if([colorString isEqualToString:@"color_j"])
-                return COLOR_J;
-            else if([colorString isEqualToString:@"color_k"])
-                return COLOR_K;
-            else if([colorString isEqualToString:@"color_l"])
-                return COLOR_L;
-            else if([colorString isEqualToString:@"color_m"])
-                return COLOR_M;
-            else if([colorString isEqualToString:@"color_n"])
-                return COLOR_N;
-            else if([colorString isEqualToString:@"color_o"])
-                return COLOR_O;
-            else if([colorString isEqualToString:@"color_p"])
-                return COLOR_P;
-            else if([colorString isEqualToString:@"color_q"])
-                return COLOR_Q;
-            else if([colorString isEqualToString:@"color_r"])
-                return COLOR_R;
-            else if([colorString isEqualToString:@"color_s"])
-                return COLOR_S;
-            else if([colorString isEqualToString:@"color_t"])
-                return COLOR_T;
-            //            else if([colorString isEqualToString:@"color_u"])
-            //                return COLOR_U;
-            //            else if([colorString isEqualToString:@"color_v"])
-            //                return COLOR_V;
-            else if([colorString isEqualToString:@"color_w"])
-                return COLOR_W;
-            else if([colorString isEqualToString:@"color_x"])
-                return COLOR_X;
-            else if([colorString isEqualToString:@"color_y"])
-                return COLOR_Y;
-            else if([colorString isEqualToString:@"color_z"])
-                return COLOR_Z;
-            else if([colorString isEqualToString:@"color_af"])
-                return COLOR_AF;
-            else if([colorString isEqualToString:@"color_ad"])
-                return COLOR_AD;
-            else if([colorString isEqualToString:@"color_login"])
-                return COLOR_C;
-            else if([colorString isEqualToString:@"color_ii"])
-            {
-                return COLOR_I;
-            }
+            return [CommonUtil colorFromHexRGB:colorString];
+//            if([colorString isEqualToString:@"color_a"])
+//                return COLOR_A;
+//            else if([colorString isEqualToString:@"color_b"])
+//                return COLOR_B;
+//            else if([colorString isEqualToString:@"color_c"])
+//                return COLOR_C;
+//            else if([colorString isEqualToString:@"color_d"])
+//                return COLOR_D;
+//            else if([colorString isEqualToString:@"color_e"])
+//                return COLOR_E;
+//            else if([colorString isEqualToString:@"color_f"])
+//                return COLOR_F;
+//            else if([colorString isEqualToString:@"color_g"])
+//                return COLOR_G;
+//            else if([colorString isEqualToString:@"color_h"])
+//                return COLOR_H;
+//            else if([colorString isEqualToString:@"color_i"])
+//                return COLOR_I;
+//            else if([colorString isEqualToString:@"color_j"])
+//                return COLOR_J;
+//            else if([colorString isEqualToString:@"color_k"])
+//                return COLOR_K;
+//            else if([colorString isEqualToString:@"color_l"])
+//                return COLOR_L;
+//            else if([colorString isEqualToString:@"color_m"])
+//                return COLOR_M;
+//            else if([colorString isEqualToString:@"color_n"])
+//                return COLOR_N;
+//            else if([colorString isEqualToString:@"color_o"])
+//                return COLOR_O;
+//            else if([colorString isEqualToString:@"color_p"])
+//                return COLOR_P;
+//            else if([colorString isEqualToString:@"color_q"])
+//                return COLOR_Q;
+//            else if([colorString isEqualToString:@"color_r"])
+//                return COLOR_R;
+//            else if([colorString isEqualToString:@"color_s"])
+//                return COLOR_S;
+//            else if([colorString isEqualToString:@"color_t"])
+//                return COLOR_T;
+//            //            else if([colorString isEqualToString:@"color_u"])
+//            //                return COLOR_U;
+//            //            else if([colorString isEqualToString:@"color_v"])
+//            //                return COLOR_V;
+//            else if([colorString isEqualToString:@"color_w"])
+//                return COLOR_W;
+//            else if([colorString isEqualToString:@"color_x"])
+//                return COLOR_X;
+//            else if([colorString isEqualToString:@"color_y"])
+//                return COLOR_Y;
+//            else if([colorString isEqualToString:@"color_z"])
+//                return COLOR_Z;
+//            else if([colorString isEqualToString:@"color_af"])
+//                return COLOR_AF;
+//            else if([colorString isEqualToString:@"color_ad"])
+//                return COLOR_AD;
+//            else if([colorString isEqualToString:@"color_login"])
+//                return COLOR_C;
+//            else if([colorString isEqualToString:@"color_ii"])
+//            {
+//                return COLOR_I;
+//            }
         }
     }
-    return COLOR_D;
+//    return COLOR_D;
+    return nil;
 }
 -(CGFloat)adjustRowHeight:(int)row changeLeft:(BOOL)changeLeft
 {

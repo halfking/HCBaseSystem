@@ -237,7 +237,7 @@
     PP_RELEASE(textArray_);
     PP_RELEASE(drawLines_);
     PP_RELEASE(splitChar);
-    [super dealloc];
+    PP_SUPERDEALLOC;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -254,8 +254,8 @@
         lineHeight                     = 20;
         minFontSize                    = 8;
         fontSize                       = 16;
-        fontName                       = PP_RETAIN(FONT_TITLE);
-        secondFontName                 = PP_RETAIN(FONT_TEXT);
+        fontName                       = PP_RETAIN(@"ArialMT");
+        secondFontName                 = PP_RETAIN(@"ArialMT");
         self.userInteractionEnabled    = NO;
         isAllChangeSize = NO;
         self.backgroundColor = [UIColor clearColor];
@@ -526,7 +526,8 @@
     {
         Y                              += self.lineHeight;
     }
-    [retTemp release];
+    PP_RELEASE(retTemp);
+    
     return CGSizeMake(X, Y);
 }
 

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "hcbasesystem"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -44,10 +44,10 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "7.0"
+   s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-   s.ios.deployment_target = "7.0"
+   s.ios.deployment_target = "8.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -108,7 +108,7 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
     s.dependency "HCMinizip", "~> 1.2.6"
-    s.dependency "hccoren", "~> 0.1.1"
+    s.dependency "hccoren", "~> 0.1.2"
     s.dependency "Qiniu", "~> 7.0"
     s.dependency "UMengAnalytics-NO-IDFA"
     s.dependency "TuSDK"
@@ -117,6 +117,8 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
 
     s.dependency 'MOBFoundation_IDFA'
     s.dependency 'SMSSDK'
+    s.dependency 'UMengSocial', '~> 5.0'
+    s.dependency 'GTSDK', '~> 1.4.2-noidfa'
 
     s.subspec 'Ver' do |spec|
         spec.requires_arc            = true
