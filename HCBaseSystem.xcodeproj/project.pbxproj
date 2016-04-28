@@ -25,6 +25,8 @@
 		114DE5F11CC9C687004BE152 /* vdc.h in Headers */ = {isa = PBXBuildFile; fileRef = 114DE5F01CC9C573004BE152 /* vdc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11502F4B1CD285B300365412 /* HXNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 11502F491CD285B300365412 /* HXNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11502F4C1CD285B300365412 /* HXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 11502F4A1CD285B300365412 /* HXNetwork.m */; };
+		11502F511CD2941800365412 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 11502F4F1CD2941800365412 /* MBProgressHUD.h */; };
+		11502F521CD2941800365412 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 11502F501CD2941800365412 /* MBProgressHUD.m */; };
 		11ED402F1CC694D200561E33 /* HCBaseSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED402E1CC694D200561E33 /* HCBaseSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED40361CC694D200561E33 /* HCBaseSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ED402B1CC694D200561E33 /* HCBaseSystem.framework */; };
 		11ED403B1CC694D200561E33 /* HCBaseSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED403A1CC694D200561E33 /* HCBaseSystemTests.m */; };
@@ -201,6 +203,8 @@
 		114DE5F01CC9C573004BE152 /* vdc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vdc.h; path = ../vdc.h; sourceTree = "<group>"; };
 		11502F491CD285B300365412 /* HXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNetwork.h; sourceTree = "<group>"; };
 		11502F4A1CD285B300365412 /* HXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNetwork.m; sourceTree = "<group>"; };
+		11502F4F1CD2941800365412 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		11502F501CD2941800365412 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		11CF54179118B83A7CC9FF62 /* Pods-HCBaseSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCBaseSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCBaseSystem/Pods-HCBaseSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		11ED402B1CC694D200561E33 /* HCBaseSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCBaseSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ED402E1CC694D200561E33 /* HCBaseSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseSystem.h; sourceTree = "<group>"; };
@@ -634,6 +638,8 @@
 		11ED437E1CC92CFA00561E33 /* UIControls */ = {
 			isa = PBXGroup;
 			children = (
+				11502F4F1CD2941800365412 /* MBProgressHUD.h */,
+				11502F501CD2941800365412 /* MBProgressHUD.m */,
 				11EFDE7B1CD24F1200DD2225 /* UIMLabel.h */,
 				11EFDE7C1CD24F1200DD2225 /* UIMLabel.m */,
 				11EFDE7D1CD24F1200DD2225 /* UIMLabelEx.h */,
@@ -738,6 +744,7 @@
 				11ED426F1CC8BF8800561E33 /* QTimespan.h in Headers */,
 				11ED42671CC8B7C100561E33 /* CMD_HeatBeat.h in Headers */,
 				11ED42631CC8B6A700561E33 /* CMD_LogEvent.h in Headers */,
+				11502F511CD2941800365412 /* MBProgressHUD.h in Headers */,
 				11ED424E1CC89D8A00561E33 /* VDCLoaderConnection.h in Headers */,
 				11ED42581CC89D8A00561E33 /* VDCTempFileManager(readwriter).h in Headers */,
 				11EFDE601CD1EFE200DD2225 /* iVersion.h in Headers */,
@@ -957,6 +964,7 @@
 				11ED42681CC8B7C100561E33 /* CMD_HeatBeat.m in Sources */,
 				11ED41971CC72B0900561E33 /* CMD_0001.m in Sources */,
 				11ED409F1CC7237300561E33 /* HCUserFriend.m in Sources */,
+				11502F521CD2941800365412 /* MBProgressHUD.m in Sources */,
 				11ED424A1CC89D8A00561E33 /* TestDownloadViewController.m in Sources */,
 				11ED420F1CC732FD00561E33 /* CMD_LOGTIME.m in Sources */,
 				11ED40A61CC7237300561E33 /* UserInfo-Extend.m in Sources */,

@@ -16,17 +16,17 @@
 #import "UserManager.h"
 #import "CMD_BindGTCID.h"
 
-#import "UMSocialControllerService.h"
-#import "UMSocial.h"
+//#import "UMSocialControllerService.h"
+//#import "UMSocial.h"
 
-#import "UMSocialSinaSSOHandler.h"
+//#import "UMSocialSinaSSOHandler.h"
 
-#import "UMSocialWechatHandler.h"
-#import "UMSocialQQHandler.h"
+//#import "UMSocialWechatHandler.h"
+//#import "UMSocialQQHandler.h"
 //#import "UMSocialSinaHandler.h"
 //#import "UMSocialTencentWeiboHandler.h"
 //#import "UMSocialRenrenHandler.h"
-#import "UMSocialQQHandler.h"
+//#import "UMSocialQQHandler.h"
 
 //#import <TuSDKGeeV1/TuSDKGeeV1.h>
 //#import "TuSDKFramework.h"
