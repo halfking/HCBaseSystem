@@ -29,7 +29,7 @@
 
 #import "UMSocialWechatHandler.h"
 #import "UMSocialQQHandler.h"
-#import "UMSocialSinaHandler.h"
+//#import "UMSocialSinaHandler.h"
 //#import "UMSocialTencentWeiboHandler.h"
 //#import "UMSocialRenrenHandler.h"
 #import "UMSocialQQHandler.h"

@@ -110,9 +110,6 @@
 		11ED420F1CC732FD00561E33 /* CMD_LOGTIME.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED420D1CC732FD00561E33 /* CMD_LOGTIME.m */; };
 		11ED42121CC7333E00561E33 /* CMDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42101CC7333E00561E33 /* CMDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED42131CC7333E00561E33 /* CMDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42111CC7333E00561E33 /* CMDLog.m */; };
-		11ED42191CC7342000561E33 /* GeTuiSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42161CC7342000561E33 /* GeTuiSdk.h */; };
-		11ED421A1CC7342000561E33 /* GeTuiSdkError.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42171CC7342000561E33 /* GeTuiSdkError.h */; };
-		11ED421B1CC7342000561E33 /* libGeTuiSdk-1.2.1.a1 in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ED42181CC7342000561E33 /* libGeTuiSdk-1.2.1.a1 */; };
 		11ED42281CC73CBB00561E33 /* Cover.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42261CC73CBB00561E33 /* Cover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED42291CC73CBB00561E33 /* Cover.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42271CC73CBB00561E33 /* Cover.m */; };
 		11ED422A1CC8804D00561E33 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42221CC7382800561E33 /* config.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -289,9 +286,6 @@
 		11ED420D1CC732FD00561E33 /* CMD_LOGTIME.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_LOGTIME.m; sourceTree = "<group>"; };
 		11ED42101CC7333E00561E33 /* CMDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDLog.h; sourceTree = "<group>"; };
 		11ED42111CC7333E00561E33 /* CMDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDLog.m; sourceTree = "<group>"; };
-		11ED42161CC7342000561E33 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
-		11ED42171CC7342000561E33 /* GeTuiSdkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdkError.h; sourceTree = "<group>"; };
-		11ED42181CC7342000561E33 /* libGeTuiSdk-1.2.1.a1 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.2.1.a1"; sourceTree = "<group>"; };
 		11ED42221CC7382800561E33 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		11ED42231CC7384000561E33 /* textresource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = textresource.h; sourceTree = "<group>"; };
 		11ED42261CC73CBB00561E33 /* Cover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cover.h; sourceTree = "<group>"; };
@@ -377,7 +371,6 @@
 				11ED42921CC8D14D00561E33 /* libstdc++.tbd in Frameworks */,
 				11ED42841CC8D01100561E33 /* libc++.tbd in Frameworks */,
 				11ED42821CC8CE7C00561E33 /* libsqlite3.0.tbd in Frameworks */,
-				11ED421B1CC7342000561E33 /* libGeTuiSdk-1.2.1.a1 in Frameworks */,
 				0A65491F9D71FBD8692DB7CF /* libPods-HCBaseSystem.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,7 +537,6 @@
 		11ED41111CC7288B00561E33 /* TM */ = {
 			isa = PBXGroup;
 			children = (
-				11ED42141CC7342000561E33 /* GeTui */,
 				11ED41121CC7288B00561E33 /* CMD_BindGTCID.h */,
 				11ED41131CC7288B00561E33 /* CMD_BindGTCID.m */,
 				11ED41141CC7288B00561E33 /* TMManager.h */,
@@ -599,24 +591,6 @@
 				11ED420D1CC732FD00561E33 /* CMD_LOGTIME.m */,
 			);
 			path = CMDEX;
-			sourceTree = "<group>";
-		};
-		11ED42141CC7342000561E33 /* GeTui */ = {
-			isa = PBXGroup;
-			children = (
-				11ED42151CC7342000561E33 /* include */,
-				11ED42181CC7342000561E33 /* libGeTuiSdk-1.2.1.a1 */,
-			);
-			path = GeTui;
-			sourceTree = "<group>";
-		};
-		11ED42151CC7342000561E33 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				11ED42161CC7342000561E33 /* GeTuiSdk.h */,
-				11ED42171CC7342000561E33 /* GeTuiSdkError.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		11ED422D1CC89D8A00561E33 /* VDCManager */ = {
@@ -766,8 +740,6 @@
 				11ED41DA1CC72BD300561E33 /* HCDBHelper-initWT.h in Headers */,
 				11ED42081CC7325E00561E33 /* HCMessageItem.h in Headers */,
 				11ED42121CC7333E00561E33 /* CMDLog.h in Headers */,
-				11ED421A1CC7342000561E33 /* GeTuiSdkError.h in Headers */,
-				11ED42191CC7342000561E33 /* GeTuiSdk.h in Headers */,
 				11ED402F1CC694D200561E33 /* HCBaseSystem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

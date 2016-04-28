@@ -10,7 +10,8 @@
 #import "CMDs_WT.h"
 #import "Config.h"
 #import <TuSDK/TuSDK.h>
-#import "GeTuiSdk.h"
+#import <GTSDK/GeTuiSdk.h>
+
 #import "UserManager.h"
 #import "CMD_BindGTCID.h"
 
@@ -21,7 +22,7 @@
 
 #import "UMSocialWechatHandler.h"
 #import "UMSocialQQHandler.h"
-#import "UMSocialSinaHandler.h"
+//#import "UMSocialSinaHandler.h"
 //#import "UMSocialTencentWeiboHandler.h"
 //#import "UMSocialRenrenHandler.h"
 #import "UMSocialQQHandler.h"
@@ -86,14 +87,14 @@ static TMManager * intance_ = nil;
 - (void)startSDK
 {
     //    [[TMManager shareObject] ]
-    NSError *err = nil;
+//    NSError *err = nil;
     
     //[1-1]:通过 AppId、 appKey 、appSecret 启动SDK
     [GeTuiSdk startSdkWithAppId:GT_AppID
                          appKey:GT_AppKey
                       appSecret:GT_AppSecret
-                       delegate:self
-                          error:&err];
+                       delegate:self ];
+//                          error:&err];
     
     //[1-2]:设置是否后台运行开关
     [GeTuiSdk runBackgroundEnable:YES];
@@ -101,29 +102,33 @@ static TMManager * intance_ = nil;
     //    //[1-3]:设置电子围栏功能，开启LBS定位服务 和 是否允许SDK 弹出用户定位请求
     //    [GeTuiSdk lbsLocationEnable:YES andUserVerify:YES];
     
-    if (err) {
-        NSLog(@"start getui failure:%@",[err localizedDescription]);
-    }
+//    if (err) {
+//        NSLog(@"start getui failure:%@",[err localizedDescription]);
+//    }
     //绑定cid uid。
     isRunning_ = YES;
 }
 - (void)stopSDK
 {
     if(isRunning_)
-        [GeTuiSdk enterBackground];
+        [GeTuiSdk setPushModeForOff:YES];
     
     isRunning_ = NO;
 }
 - (void)resumeSDK
 {
     if(isRunning_) return;
+    [GeTuiSdk setPushModeForOff:NO];
     [GeTuiSdk resume];
     isRunning_ = YES;
 }
 - (void)enterBackground
 {
     if(isRunning_)
-        [GeTuiSdk enterBackground];
+    {
+        [GeTuiSdk setPushModeForOff:YES];
+//        [GeTuiSdk enterBackground];
+    }
     isRunning_ = NO;
 }
 - (void)registerDeviceToken:(NSString *)token
@@ -421,11 +426,46 @@ static TMManager * intance_ = nil;
     //    [payloadMsg release];
     
 }
-
+- (void)GeTuiSdkDidReceivePayloadData:(NSData *)payloadData andTaskId:(NSString *)taskId andMsgId:(NSString *)msgId andOffLine:(BOOL)offLine fromGtAppId:(NSString *)appId
+{
+    ////     [4]: 收到个推消息
+    //    [_payloadId release];
+    //    _payloadId = [payloadId retain];
+    //    _payloadId= payloadId;
+    
+    NSLog(@"通过GetuiSDKDidRecievePayload取得了推送消息。");
+    NSData* payload = payloadData;//推的是什么就全部拿过来。
+    
+    NSString *payloadMsg = nil;
+    if (payload) {
+        payloadMsg = [[NSString alloc] initWithBytes:payload.bytes
+                                              length:payload.length
+                                            encoding:NSUTF8StringEncoding];
+    }
+    NSLog(@"Payload:%@ ",payloadMsg);
+    //将payload转成NSDictionary。
+    NSDictionary *payloadDic = [NSJSONSerialization JSONObjectWithData:payload options:NSJSONReadingAllowFragments error:nil];
+    
+    
+    NSLog(@"转换后的payload：%@",payloadDic);
+    //做进一步处理。
+    [self didReceiveRemoteMessage:payloadDic];
+    
+    
+    
+    
+    //    NSString *record = [NSString stringWithFormat:@"%d, %@, %@", ++_lastPaylodIndex, [self formateTime:[NSDate date]], payloadMsg];
+    //    [_viewController logMsg:record];
+    //    [_viewController updateMsgCount:_lastPaylodIndex];
+    
+    NSLog(@"task id : %@, messageId:%@", taskId, msgId);
+    
+    //    [payloadMsg release];
+}
 - (void)GeTuiSdkDidSendMessage:(NSString *)messageId result:(int)result {
     // [4-EXT]:发送上行消息结果反馈
     //    NSString *record = [NSString stringWithFormat:@"Received sendmessage:%@ result:%d", messageId, result];
-    NSLog(@"Received sendmessage:%@ result:%d", messageId, result);
+    NSLog(@"sendmessage:%@ result:%d", messageId, result);
     //    [_viewController logMsg:record];
 }
 
