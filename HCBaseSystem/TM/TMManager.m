@@ -11,6 +11,7 @@
 #import "Config.h"
 #import <TuSDK/TuSDK.h>
 #import <GTSDK/GeTuiSdk.h>
+#import <HCCallResultForWT.h>
 
 #import "UserManager.h"
 #import "CMD_BindGTCID.h"
@@ -84,17 +85,38 @@ static TMManager * intance_ = nil;
 {
     return GTClientID_;
 }
+- (void)didUserLogin:(NSNotification *)notification
+{
+    if(!notification || !notification.object) return;
+    HCCallResultForWT * result = notification.object;
+    //    NSDictionary * dic = notification.userInfo;
+    
+    if(result.Code==0)
+    {
+        
+        UserInformation * ui = (UserInformation *)result.Data;
+        if(ui.UserID>0)
+        {
+            //绑定uid， cid
+            NSString * userID = [NSString stringWithFormat:@"%ld",ui.UserID];
+            NSString * clientID = [self GTClientID];
+            if (clientID!=nil) {
+                [[TMManager shareObject]bindUID:userID andCID:clientID];
+            }
+        }
+    }
+}
 - (void)startSDK
 {
     //    [[TMManager shareObject] ]
-//    NSError *err = nil;
+    //    NSError *err = nil;
     
     //[1-1]:通过 AppId、 appKey 、appSecret 启动SDK
     [GeTuiSdk startSdkWithAppId:GT_AppID
                          appKey:GT_AppKey
                       appSecret:GT_AppSecret
                        delegate:self ];
-//                          error:&err];
+    //                          error:&err];
     
     //[1-2]:设置是否后台运行开关
     [GeTuiSdk runBackgroundEnable:YES];
@@ -102,10 +124,14 @@ static TMManager * intance_ = nil;
     //    //[1-3]:设置电子围栏功能，开启LBS定位服务 和 是否允许SDK 弹出用户定位请求
     //    [GeTuiSdk lbsLocationEnable:YES andUserVerify:YES];
     
-//    if (err) {
-//        NSLog(@"start getui failure:%@",[err localizedDescription]);
-//    }
+    //    if (err) {
+    //        NSLog(@"start getui failure:%@",[err localizedDescription]);
+    //    }
     //绑定cid uid。
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"CMD_0014" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didUserLogin:)
+                                                 name:@"CMD_0014" object:nil];
     isRunning_ = YES;
 }
 - (void)stopSDK
@@ -113,6 +139,7 @@ static TMManager * intance_ = nil;
     if(isRunning_)
         [GeTuiSdk setPushModeForOff:YES];
     
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"CMD_0014" object:nil];
     isRunning_ = NO;
 }
 - (void)resumeSDK
@@ -120,6 +147,11 @@ static TMManager * intance_ = nil;
     if(isRunning_) return;
     [GeTuiSdk setPushModeForOff:NO];
     [GeTuiSdk resume];
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"CMD_0014" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didUserLogin:)
+                                                 name:@"CMD_0014" object:nil];
     isRunning_ = YES;
 }
 - (void)enterBackground
@@ -127,7 +159,7 @@ static TMManager * intance_ = nil;
     if(isRunning_)
     {
         [GeTuiSdk setPushModeForOff:YES];
-//        [GeTuiSdk enterBackground];
+        //        [GeTuiSdk enterBackground];
     }
     isRunning_ = NO;
 }
@@ -153,7 +185,7 @@ static TMManager * intance_ = nil;
 {
     if([UIApplication sharedApplication].applicationState!=UIApplicationStateActive) return NO;
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTI_NEWMESSAGE object:self userInfo:payloadDic];
- 
+    
     int type = [[payloadDic objectForKey:@"type"] intValue];
     switch (type) {
         case 101:
@@ -195,116 +227,116 @@ static TMManager * intance_ = nil;
         default:
             break;
     }
-//    NSDictionary *pushdata = [userInfo objectForKey:@"userinfo"];
-//    NSDictionary *payloadMsg = [pushdata objectForKey:@"payload"];;
-//    /*
-//     {
-//         userinfo:{
-//            aps:{
-//                content-available:1,
-//                alert:"",
-//                badge:1
-//                },
-//            payload:{
-//                pushtype:1,
-//                param:{....}
-//            }
-//         }
-//     }
-//     */
-//    NSLog(@"得到的payload为：%@",payloadMsg);
-//    NSLog(@"userinfo:%@",userInfo);
-//    NSDictionary *aps = [pushdata objectForKey:@"aps"];
-//    //NSDictionary *alert = [aps objectForKey:@"alert"];
-//    
-//    NSNumber *contentAvailable = aps == nil ? nil : [aps objectForKeyedSubscript:@"content-available"];
-//    
-//    if (payloadMsg && contentAvailable) {//???
-//        //        NSString *record = [NSString stringWithFormat:@"[APN]%@, %@, [content-available: %@]", [NSDate date], payloadMsg, contentAvailable];
-//    }
-//    
-//    //显示收到的alert的文本消息。
-//    {
-//        NSLog(@" 收到推送消息 ： %@",[[pushdata objectForKey:@"aps"] objectForKey:@"alert"]);
-//        //使用个推后，还需要做处理吗？参考个推Demo。
-//    }
-//    //收到通知时发出的声音
-//    {
-//        //使用个推后还需要做处理吗？
-//        
-//    }
-//    
-//    //处理图标上的红色数字。
-//    {
-//        id v = [[pushdata objectForKey:@"aps"] objectForKey:@"badge"];
-//        int count   = 0;
-//        if(v) count = [v intValue];
-//        
-//        //设置Icon上的数字。
-//        [UIApplication sharedApplication].applicationIconBadgeNumber = count;
-//        
-//    }
+    //    NSDictionary *pushdata = [userInfo objectForKey:@"userinfo"];
+    //    NSDictionary *payloadMsg = [pushdata objectForKey:@"payload"];;
+    //    /*
+    //     {
+    //         userinfo:{
+    //            aps:{
+    //                content-available:1,
+    //                alert:"",
+    //                badge:1
+    //                },
+    //            payload:{
+    //                pushtype:1,
+    //                param:{....}
+    //            }
+    //         }
+    //     }
+    //     */
+    //    NSLog(@"得到的payload为：%@",payloadMsg);
+    //    NSLog(@"userinfo:%@",userInfo);
+    //    NSDictionary *aps = [pushdata objectForKey:@"aps"];
+    //    //NSDictionary *alert = [aps objectForKey:@"alert"];
+    //
+    //    NSNumber *contentAvailable = aps == nil ? nil : [aps objectForKeyedSubscript:@"content-available"];
+    //
+    //    if (payloadMsg && contentAvailable) {//???
+    //        //        NSString *record = [NSString stringWithFormat:@"[APN]%@, %@, [content-available: %@]", [NSDate date], payloadMsg, contentAvailable];
+    //    }
+    //
+    //    //显示收到的alert的文本消息。
+    //    {
+    //        NSLog(@" 收到推送消息 ： %@",[[pushdata objectForKey:@"aps"] objectForKey:@"alert"]);
+    //        //使用个推后，还需要做处理吗？参考个推Demo。
+    //    }
+    //    //收到通知时发出的声音
+    //    {
+    //        //使用个推后还需要做处理吗？
+    //
+    //    }
+    //
+    //    //处理图标上的红色数字。
+    //    {
+    //        id v = [[pushdata objectForKey:@"aps"] objectForKey:@"badge"];
+    //        int count   = 0;
+    //        if(v) count = [v intValue];
+    //
+    //        //设置Icon上的数字。
+    //        [UIApplication sharedApplication].applicationIconBadgeNumber = count;
+    //
+    //    }
     
     //获得推送类型。按照不同的类型，发布不同的通知出去。参数可以放在object里面。
-//    {
-//        PushMessageType pushType = (PushMessageType)[[payloadMsg objectForKey:@"pushtype"]intValue];//推送类型
-//        
-//        NSLog(@"%@",[payloadMsg JSONRepresentationEx]);
-//        
-//        //        PushMessageType testid = (PushMessageType)[[payloadMsg objectForKey:@"pushtype"]intValue];
-//        
-//        
-//        NSDictionary * param = (NSDictionary *)[payloadMsg objectForKey:@"param"];//带的参数。
-//        switch (pushType) {
-//            case OpenDirectBroadcast:
-//            {
-//                [[NSNotificationCenter defaultCenter]postNotificationName:OPEN_DIRECT_BROADCAST
-//                                                                   object:param
-//                                                                 userInfo:nil];
-//                break;
-//            }
-//            case CloseDirectBroadcast:{
-//                [[NSNotificationCenter defaultCenter]postNotificationName:CLOSE_DIRECT_BROADCAST
-//                                                                   object:param
-//                                                                 userInfo:nil];
-//                
-//                break;
-//            }
-//            case BeginWatchingMTV:{
-//                [[NSNotificationCenter defaultCenter]postNotificationName:BEGIN_WATCHING_MTV
-//                                                                   object:param
-//                                                                 userInfo:nil];
-//                break;
-//            }
-//            case StopWatching:{
-//                [[NSNotificationCenter defaultCenter]postNotificationName:STOP_WATCHING
-//                                                                   object:param
-//                                                                 userInfo:nil];
-//                break;
-//            }
-//            case AddConcern:{
-//                [[NSNotificationCenter defaultCenter]postNotificationName:ADD_CONCERN
-//                                                                   object:param
-//                                                                 userInfo:nil];
-//                break;
-//            }
-//            case RemoveConcern:{
-//                [[NSNotificationCenter defaultCenter] postNotificationName:REMOVE_CONCERN
-//                                                                    object:param
-//                                                                  userInfo:nil];
-//                break;
-//            }
-//            case NewComments:{
-//                [[NSNotificationCenter defaultCenter] postNotificationName:NEW_COMMENTS
-//                                                                    object:param
-//                                                                  userInfo:nil];
-//                break;
-//            }
-//                
-//            default:
-//                break;
-//        }
-//    }
+    //    {
+    //        PushMessageType pushType = (PushMessageType)[[payloadMsg objectForKey:@"pushtype"]intValue];//推送类型
+    //
+    //        NSLog(@"%@",[payloadMsg JSONRepresentationEx]);
+    //
+    //        //        PushMessageType testid = (PushMessageType)[[payloadMsg objectForKey:@"pushtype"]intValue];
+    //
+    //
+    //        NSDictionary * param = (NSDictionary *)[payloadMsg objectForKey:@"param"];//带的参数。
+    //        switch (pushType) {
+    //            case OpenDirectBroadcast:
+    //            {
+    //                [[NSNotificationCenter defaultCenter]postNotificationName:OPEN_DIRECT_BROADCAST
+    //                                                                   object:param
+    //                                                                 userInfo:nil];
+    //                break;
+    //            }
+    //            case CloseDirectBroadcast:{
+    //                [[NSNotificationCenter defaultCenter]postNotificationName:CLOSE_DIRECT_BROADCAST
+    //                                                                   object:param
+    //                                                                 userInfo:nil];
+    //
+    //                break;
+    //            }
+    //            case BeginWatchingMTV:{
+    //                [[NSNotificationCenter defaultCenter]postNotificationName:BEGIN_WATCHING_MTV
+    //                                                                   object:param
+    //                                                                 userInfo:nil];
+    //                break;
+    //            }
+    //            case StopWatching:{
+    //                [[NSNotificationCenter defaultCenter]postNotificationName:STOP_WATCHING
+    //                                                                   object:param
+    //                                                                 userInfo:nil];
+    //                break;
+    //            }
+    //            case AddConcern:{
+    //                [[NSNotificationCenter defaultCenter]postNotificationName:ADD_CONCERN
+    //                                                                   object:param
+    //                                                                 userInfo:nil];
+    //                break;
+    //            }
+    //            case RemoveConcern:{
+    //                [[NSNotificationCenter defaultCenter] postNotificationName:REMOVE_CONCERN
+    //                                                                    object:param
+    //                                                                  userInfo:nil];
+    //                break;
+    //            }
+    //            case NewComments:{
+    //                [[NSNotificationCenter defaultCenter] postNotificationName:NEW_COMMENTS
+    //                                                                    object:param
+    //                                                                  userInfo:nil];
+    //                break;
+    //            }
+    //
+    //            default:
+    //                break;
+    //        }
+    //    }
     
     
     //    [[SystemConfiguration sharedSystemConfiguration] getUserSummaryFromServer];

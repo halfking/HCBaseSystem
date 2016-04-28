@@ -18,7 +18,7 @@
 #import "CMD_Register.h"
 #import "HCCallResultForWT.h"
 #import "UserInfo-Extend.h"
-#import "TMManager.h"
+//#import "TMManager.h"
 
 #import "CMDS_WT.h"
 #import "CMD_Register.h"
@@ -72,9 +72,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
                                                  selector:@selector(saveToFile)
                                                      name:UIApplicationWillResignActiveNotification
                                                    object:app];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(didLogin:)
-                                                     name:@"CMD_0014" object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(didLogin:)
+//                                                     name:@"CMD_0014" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didLogout:)
                                                      name:@"CMD_0015" object:nil];
@@ -487,6 +487,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
     {
         NSNotification * noti = [[NSNotification alloc]initWithName:@"CMD_0014" object:result userInfo:nil];
         [weakSelf didLogin:noti];
+        [[NSNotificationCenter defaultCenter]postNotification:noti];
         if(result.Code==0 && completed)
         {
             completed(YES);
@@ -519,6 +520,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
             [weakSelf didLogin:noti];
             //有可能用户信息还没有返回，导致用户的昵称被重置
             user_.NickName = userName;
+            [[NSNotificationCenter defaultCenter]postNotification:noti];
             
             if(result.Code==0 && completed)
             {
@@ -583,6 +585,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
             
             NSNotification * noti = [[NSNotification alloc]initWithName:@"CMD_0014" object:result userInfo:dic];
             [weakSelf didLogin:noti];
+            [[NSNotificationCenter defaultCenter]postNotification:noti];
             if(result.Code==0 && completed)
             {
                 completed(YES);
@@ -993,13 +996,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
         }
         [self saveToFile];
         [self setIsLogin:user_.UserName isLogin:YES];
-        //FIXME 绑定uid，cid。
-        //绑定uid， cid
-        NSString * userID = [NSString stringWithFormat:@"%ld",user_.UserID];
-        NSString * clientID = [[TMManager shareObject] GTClientID];
-        if (clientID!=nil) {
-            [[TMManager shareObject]bindUID:userID andCID:clientID];
-        }
+        //绑定uid， cid,移到TM中
+//        NSString * userID = [NSString stringWithFormat:@"%ld",user_.UserID];
+//        NSString * clientID = [[TMManager shareObject] GTClientID];
+//        if (clientID!=nil) {
+//            [[TMManager shareObject]bindUID:userID andCID:clientID];
+//        }
+//        [[NSNotificationCenter defaultCenter]postNotification:notification];
         [[NSNotificationCenter defaultCenter]postNotificationName:NT_USERIDCHANGED object:nil];
     }
     else

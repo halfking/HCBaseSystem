@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.0.3"
+  s.version      = "0.0.5"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -158,66 +158,34 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
             'SystemConfiguration'
         ]
     end
-    s.subspec 'CMDEX' do |spec|
-        spec.requires_arc            = true
-        spec.source_files = [
-            "HCBaseSystem/CMDEX/*.{h,m,mm,cpp,c}",
-            "HCBaseSystem/cmd_wt.h",
-            "HCBaseSystem/database_wt.h"
-        ]
-        spec.public_header_files = [
-            'HCBaseSystem/CMDEX/*.h',
-            'HCBaseSystem/cmd_wt.h',
-            "HCBaseSystem/database_wt.h"
-        ]
-        #spec.frameworks = []
-    end
     s.subspec 'User' do |spec|
         spec.requires_arc            = true
         spec.source_files = [
-        "HCBaseSystem/Users/*.{h,m,mm,cpp,c}",
-        "HCBaseSystem/User_WT.h",
-        "HCBaseSystem/config.h",
-        "HCBaseSystem/textresource.h",
-        "HCBaseSystem/PublicEnum.h"
+            "HCBaseSystem/CMDEX/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/Users/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/UpDown/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/UpDown.h",
+            "HCBaseSystem/User_WT.h",
+            "HCBaseSystem/config.h",
+            "HCBaseSystem/textresource.h",
+#            "HCBaseSystem/Users/CMD_0001.{h,m}",
+            "HCBaseSystem/cmd_wt.h",
+            "HCBaseSystem/database_wt.h",
+            "HCBaseSystem/PublicEnum.h",
         ]
         spec.public_header_files = [
+            'HCBaseSystem/CMDEX/*.h',
             'HCBaseSystem/Users/*.h',
+            "HCBaseSystem/UpDown/*.h",
+            "HCBaseSystem/UpDown.h",
             'HCBaseSystem/User_WT.h',
             "HCBaseSystem/config.h",
             "HCBaseSystem/textresource.h",
-            "HCBaseSystem/PublicEnum.h"
+#            'HCBaseSystem/Users/CMD_0001.h',
+            'HCBaseSystem/cmd_wt.h',
+            "HCBaseSystem/database_wt.h",
+            "HCBaseSystem/PublicEnum.h",
         ]
         #spec.frameworks = []
-    end
-    s.subspec 'VDCAndUpdown' do |spec|
-        spec.requires_arc            = true
-        spec.source_files = [
-            "HCBaseSystem/VDCManager/*.{h,m,mm,cpp,c}",
-            "HCBaseSystem/UpDown/*.{h,m,mm,cpp,c}",
-            "HCBaseSystem/UpDown.h",
-            "HCBaseSystem/vdc.h"
-        ]
-        spec.public_header_files = [
-            "HCBaseSystem/VDCManager/*.h",
-            "HCBaseSystem/UpDown/*.h",
-            "HCBaseSystem/UpDown.h",
-            "HCBaseSystem/vdc.h"
-        ]
-        #spec.frameworks = []
-        spec.ios.dependency 'HCBaseSystem/User'
-    end
-    s.subspec 'ShareTM' do |spec|
-        spec.requires_arc            = true
-        spec.source_files = [
-        "HCBaseSystem/TM/*.{h,m,mm,cpp,c}",
-        "HCBaseSystem/Share/*.{h,m,mm,cpp,c}"
-        ]
-        spec.public_header_files = [
-            "HCBaseSystem/TM/*.h",
-            "HCBaseSystem/Share/*.h"
-        ]
-        #spec.frameworks = []
-        spec.ios.dependency 'HCBaseSystem/User'
     end
  end

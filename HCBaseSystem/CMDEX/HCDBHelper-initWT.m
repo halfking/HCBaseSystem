@@ -23,8 +23,8 @@
 //#import "PrefixHeader.pch"
 
 //#import "PageTag.h"
-#warning 因为编译的原因，暂时注释
-//#import "UDInfo.h"
+
+#import "UDInfo.h"
 
 //#import "HCRegion.h"
 //#import "UserStars.h"
@@ -52,12 +52,12 @@ extern sqlite3* database_;
     if([helper open])
     {
         NSString * result = nil;
-        QTimespan * mtv = [QTimespan new];
-        isDBOK = [helper execScalar:@"select max(Code) from synctimespans;" result:&result];
+        UDInfo * mtv = [UDInfo new];
+        isDBOK = [helper execScalar:@"select max(Key) from udinfos;" result:&result];
         if(isDBOK && result && result.length>0)
         {
-            isDBOK = [helper execWithEntity:mtv sql:[NSString stringWithFormat:@"select * from synctimespans where Code='%@';",result]];
-            if(isDBOK && mtv.Code)
+            isDBOK = [helper execWithEntity:mtv sql:[NSString stringWithFormat:@"select * from udinfos where key='%@';",result]];
+            if(isDBOK && mtv.Key)
             {
                 isDBOK  = [helper insertData:mtv needOpenDB:NO forceUpdate:YES];
             }
@@ -134,11 +134,11 @@ extern sqlite3* database_;
             
             CREATETABLE(helper, UserInformation);
             
- #warning 因为编译的原因，暂时注释           
-//            
-//            CREATETABLE(helper, UDInfo);
-//            
-//            [helper execNoQuery:@"CREATE INDEX idx_udinfos_orgurl ON udinfos(OrgUrl);"];
+            
+            
+            CREATETABLE(helper, UDInfo);
+            
+            [helper execNoQuery:@"CREATE INDEX idx_udinfos_orgurl ON udinfos(OrgUrl);"];
             
           
             
