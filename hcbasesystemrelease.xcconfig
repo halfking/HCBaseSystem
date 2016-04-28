@@ -1,0 +1,17 @@
+//
+//  hccorenrelease.xcconfig
+//  hccoren
+//
+//  Created by HUANGXUTAO on 16/4/27.
+//  Copyright © 2016年 seenvoice.com. All rights reserved.
+//
+#include "hccoreshare.xcconfig"
+#include "framework.xcconfig"
+
+XC_DISPLAYNAME = HCBASE RELEASE
+XC_MODE = RELEASE
+
+//:configuration = Release
+GCC_PREPROCESSOR_DEFINITIONS = __OPTIMIZE__
+
+//:completeSettings = none

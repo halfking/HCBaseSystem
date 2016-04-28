@@ -1,0 +1,17 @@
+//
+//  hccorendebug.xcconfig
+//  hccoren
+//
+//  Created by HUANGXUTAO on 16/4/27.
+//  Copyright © 2016年 seenvoice.com. All rights reserved.
+//
+#include "hccoreshare.xcconfig"
+#include "framework.xcconfig"
+
+
+XC_DISPLAYNAME = HCBASE DEBUG
+XC_MODE = DEBUG
+
+//:configuration = Debug
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1 //$(inherited)
+
