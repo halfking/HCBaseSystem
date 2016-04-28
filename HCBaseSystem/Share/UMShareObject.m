@@ -15,7 +15,7 @@
 
 #import <UMengAnalytics-NO-IDFA/MobClick.h>
 #import <SMS_SDK/SMSSDK.h>
-#import <SMS_SDK/SMSSDK+AddressBookMethods.h>
+//#import <SMS_SDK/SMSSDK+AddressBookMethods.h>
 #import <MOBFoundation/MOBFoundation.h>
 
 #import "CMDs_WT.h"
