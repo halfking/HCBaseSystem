@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint HCCoren.podspec' to ensure this is a
+#  Be sure to run `pod spec lint HCBaseSystem' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "hcbasesystem"
-  s.version      = "0.0.2"
+  s.name         = "HCBaseSystem"
+  s.version      = "0.0.3"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -44,10 +44,10 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "8.0"
+   s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
-   s.ios.deployment_target = "8.0"
+   s.ios.deployment_target = "7.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -140,6 +140,10 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
         spec.source_files = [
             "HCBaseSystem/UIControls/*.{h,m,mm,cpp,c}",
             "HCBaseSystem/imagecontrols.h"
+        ]
+        spec.exclude_files = [
+            "HCBaseSystem/UIControls/LoginViewNew.{h,m,mm,cpp,c}",
+            "HCBaseSystem/UIControls/ShareView.{h,m,mm,cpp,c}"
         ]
         spec.public_header_files = [
             'HCBaseSystem/UIControls/*.h',
