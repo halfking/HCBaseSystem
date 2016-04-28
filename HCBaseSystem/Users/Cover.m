@@ -8,7 +8,7 @@
 
 #import "Cover.h"
 
-#import <hccoren/NSString+SBJSON.h>
+//#import <hccoren/NSString+SBJSON.h>
 
 @implementation CoverAttributes
 

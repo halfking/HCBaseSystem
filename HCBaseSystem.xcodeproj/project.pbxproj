@@ -23,7 +23,7 @@
 /* Begin PBXBuildFile section */
 		0A65491F9D71FBD8692DB7CF /* libPods-HCBaseSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4029536941EE2CA04EA592CE /* libPods-HCBaseSystem.a */; };
 		114DE5F11CC9C687004BE152 /* vdc.h in Headers */ = {isa = PBXBuildFile; fileRef = 114DE5F01CC9C573004BE152 /* vdc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11502F4B1CD285B300365412 /* HXNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 11502F491CD285B300365412 /* HXNetwork.h */; };
+		11502F4B1CD285B300365412 /* HXNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 11502F491CD285B300365412 /* HXNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11502F4C1CD285B300365412 /* HXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 11502F4A1CD285B300365412 /* HXNetwork.m */; };
 		11ED402F1CC694D200561E33 /* HCBaseSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED402E1CC694D200561E33 /* HCBaseSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED40361CC694D200561E33 /* HCBaseSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ED402B1CC694D200561E33 /* HCBaseSystem.framework */; };
@@ -181,9 +181,9 @@
 		11EFDE721CD1F37200DD2225 /* hcbasesystemrelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE671CD1F37200DD2225 /* hcbasesystemrelease.xcconfig */; };
 		11EFDE731CD1F37200DD2225 /* hcbasesystemshare.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE681CD1F37200DD2225 /* hcbasesystemshare.xcconfig */; };
 		11EFDE741CD1F37200DD2225 /* hcbasesystemshare.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE681CD1F37200DD2225 /* hcbasesystemshare.xcconfig */; };
-		11EFDE831CD24F1200DD2225 /* UIMLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 11EFDE7B1CD24F1200DD2225 /* UIMLabel.h */; };
+		11EFDE831CD24F1200DD2225 /* UIMLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 11EFDE7B1CD24F1200DD2225 /* UIMLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11EFDE841CD24F1200DD2225 /* UIMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EFDE7C1CD24F1200DD2225 /* UIMLabel.m */; };
-		11EFDE851CD24F1200DD2225 /* UIMLabelEx.h in Headers */ = {isa = PBXBuildFile; fileRef = 11EFDE7D1CD24F1200DD2225 /* UIMLabelEx.h */; };
+		11EFDE851CD24F1200DD2225 /* UIMLabelEx.h in Headers */ = {isa = PBXBuildFile; fileRef = 11EFDE7D1CD24F1200DD2225 /* UIMLabelEx.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11EFDE861CD24F1200DD2225 /* UIMLabelEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EFDE7E1CD24F1200DD2225 /* UIMLabelEx.m */; };
 /* End PBXBuildFile section */
 
@@ -718,7 +718,6 @@
 				11ED41B01CC72B9400561E33 /* CMD_GetUserInfo.h in Headers */,
 				11ED409A1CC7237300561E33 /* HCSysRights.h in Headers */,
 				11ED40A21CC7237300561E33 /* HCUserSummary.h in Headers */,
-				11EFDE851CD24F1200DD2225 /* UIMLabelEx.h in Headers */,
 				11ED40A71CC7237300561E33 /* UserInformation.h in Headers */,
 				11ED410B1CC7285C00561E33 /* UDInfo.h in Headers */,
 				11ED41B81CC72B9400561E33 /* CMD_SetUserInfo.h in Headers */,
@@ -734,7 +733,6 @@
 				11ED42561CC89D8A00561E33 /* VDCTempFileInfo.h in Headers */,
 				11ED42501CC89D8A00561E33 /* VDCManager(Helper).h in Headers */,
 				11ED42521CC89D8A00561E33 /* VDCManager(LocalFiles).h in Headers */,
-				11EFDE831CD24F1200DD2225 /* UIMLabel.h in Headers */,
 				11ED425A1CC89D8A00561E33 /* VDCTempFileManager.h in Headers */,
 				11ED42451CC89D8A00561E33 /* HttpVideoFileResponse.h in Headers */,
 				11ED426F1CC8BF8800561E33 /* QTimespan.h in Headers */,
@@ -750,11 +748,13 @@
 				11ED41961CC72B0900561E33 /* CMD_0001.h in Headers */,
 				11ED420E1CC732FD00561E33 /* CMD_LOGTIME.h in Headers */,
 				11ED41071CC7285C00561E33 /* CMD_GetDownloadToken.h in Headers */,
+				11EFDE851CD24F1200DD2225 /* UIMLabelEx.h in Headers */,
+				11EFDE831CD24F1200DD2225 /* UIMLabel.h in Headers */,
+				11502F4B1CD285B300365412 /* HXNetwork.h in Headers */,
 				11ED41DA1CC72BD300561E33 /* HCDBHelper-initWT.h in Headers */,
 				11ED42081CC7325E00561E33 /* HCMessageItem.h in Headers */,
 				11ED42121CC7333E00561E33 /* CMDLog.h in Headers */,
 				11ED402F1CC694D200561E33 /* HCBaseSystem.h in Headers */,
-				11502F4B1CD285B300365412 /* HXNetwork.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

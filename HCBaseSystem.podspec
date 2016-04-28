@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
