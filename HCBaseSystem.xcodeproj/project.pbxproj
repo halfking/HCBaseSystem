@@ -171,8 +171,8 @@
 		11EFDE621CD1EFE200DD2225 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EFDE5F1CD1EFE200DD2225 /* iVersion.m */; };
 		11EFDE691CD1F37200DD2225 /* framework.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE631CD1F37200DD2225 /* framework.xcconfig */; };
 		11EFDE6A1CD1F37200DD2225 /* framework.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE631CD1F37200DD2225 /* framework.xcconfig */; };
-		11EFDE6B1CD1F37200DD2225 /* hcbasesystem.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE641CD1F37200DD2225 /* hcbasesystem.podspec */; };
-		11EFDE6C1CD1F37200DD2225 /* hcbasesystem.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE641CD1F37200DD2225 /* hcbasesystem.podspec */; };
+		11EFDE6B1CD1F37200DD2225 /* HCBaseSystem.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE641CD1F37200DD2225 /* HCBaseSystem.podspec */; };
+		11EFDE6C1CD1F37200DD2225 /* HCBaseSystem.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE641CD1F37200DD2225 /* HCBaseSystem.podspec */; };
 		11EFDE6D1CD1F37200DD2225 /* hcbasesystemappstore.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE651CD1F37200DD2225 /* hcbasesystemappstore.xcconfig */; };
 		11EFDE6E1CD1F37200DD2225 /* hcbasesystemappstore.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE651CD1F37200DD2225 /* hcbasesystemappstore.xcconfig */; };
 		11EFDE6F1CD1F37200DD2225 /* hcbasesystemdebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 11EFDE661CD1F37200DD2225 /* hcbasesystemdebug.xcconfig */; };
@@ -355,7 +355,7 @@
 		11EFDE5E1CD1EFE200DD2225 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
 		11EFDE5F1CD1EFE200DD2225 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		11EFDE631CD1F37200DD2225 /* framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = framework.xcconfig; sourceTree = "<group>"; };
-		11EFDE641CD1F37200DD2225 /* hcbasesystem.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hcbasesystem.podspec; sourceTree = "<group>"; };
+		11EFDE641CD1F37200DD2225 /* HCBaseSystem.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HCBaseSystem.podspec; sourceTree = "<group>"; };
 		11EFDE651CD1F37200DD2225 /* hcbasesystemappstore.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = hcbasesystemappstore.xcconfig; sourceTree = "<group>"; };
 		11EFDE661CD1F37200DD2225 /* hcbasesystemdebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = hcbasesystemdebug.xcconfig; sourceTree = "<group>"; };
 		11EFDE671CD1F37200DD2225 /* hcbasesystemrelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = hcbasesystemrelease.xcconfig; sourceTree = "<group>"; };
@@ -417,7 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				11EFDE631CD1F37200DD2225 /* framework.xcconfig */,
-				11EFDE641CD1F37200DD2225 /* hcbasesystem.podspec */,
+				11EFDE641CD1F37200DD2225 /* HCBaseSystem.podspec */,
 				11EFDE651CD1F37200DD2225 /* hcbasesystemappstore.xcconfig */,
 				11EFDE661CD1F37200DD2225 /* hcbasesystemdebug.xcconfig */,
 				11EFDE671CD1F37200DD2225 /* hcbasesystemrelease.xcconfig */,
@@ -846,7 +846,7 @@
 			files = (
 				11EFDE691CD1F37200DD2225 /* framework.xcconfig in Resources */,
 				11ED424B1CC89D8A00561E33 /* TestDownloadViewController.xib in Resources */,
-				11EFDE6B1CD1F37200DD2225 /* hcbasesystem.podspec in Resources */,
+				11EFDE6B1CD1F37200DD2225 /* HCBaseSystem.podspec in Resources */,
 				11EFDE6D1CD1F37200DD2225 /* hcbasesystemappstore.xcconfig in Resources */,
 				11EFDE6F1CD1F37200DD2225 /* hcbasesystemdebug.xcconfig in Resources */,
 				11EFDE711CD1F37200DD2225 /* hcbasesystemrelease.xcconfig in Resources */,
@@ -859,7 +859,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EFDE6A1CD1F37200DD2225 /* framework.xcconfig in Resources */,
-				11EFDE6C1CD1F37200DD2225 /* hcbasesystem.podspec in Resources */,
+				11EFDE6C1CD1F37200DD2225 /* HCBaseSystem.podspec in Resources */,
 				11EFDE721CD1F37200DD2225 /* hcbasesystemrelease.xcconfig in Resources */,
 				11EFDE6E1CD1F37200DD2225 /* hcbasesystemappstore.xcconfig in Resources */,
 				11EFDE701CD1F37200DD2225 /* hcbasesystemdebug.xcconfig in Resources */,
@@ -1078,7 +1078,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1120,7 +1120,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1149,7 +1149,7 @@
 				);
 				INFOPLIST_FILE = HCBaseSystem/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1187,7 +1187,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = HCBaseSystem/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
