@@ -157,6 +157,67 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
             'OpenGLES',
             'SystemConfiguration'
         ]
-#spec.ios.dependency 'hccoren/Core'
+    end
+    s.subspec 'CMDEX' do |spec|
+        spec.requires_arc            = true
+        spec.source_files = [
+            "HCBaseSystem/CMDEX/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/cmd_wt.h",
+            "HCBaseSystem/database_wt.h"
+        ]
+        spec.public_header_files = [
+            'HCBaseSystem/CMDEX/*.h',
+            'HCBaseSystem/cmd_wt.h',
+            "HCBaseSystem/database_wt.h"
+        ]
+        #spec.frameworks = []
+    end
+    s.subspec 'User' do |spec|
+        spec.requires_arc            = true
+        spec.source_files = [
+        "HCBaseSystem/Users/*.{h,m,mm,cpp,c}",
+        "HCBaseSystem/User_WT.h",
+        "HCBaseSystem/config.h",
+        "HCBaseSystem/textresource.h",
+        "HCBaseSystem/PublicEnum.h"
+        ]
+        spec.public_header_files = [
+            'HCBaseSystem/Users/*.h',
+            'HCBaseSystem/User_WT.h',
+            "HCBaseSystem/config.h",
+            "HCBaseSystem/textresource.h",
+            "HCBaseSystem/PublicEnum.h"
+        ]
+        #spec.frameworks = []
+    end
+    s.subspec 'VDCAndUpdown' do |spec|
+        spec.requires_arc            = true
+        spec.source_files = [
+            "HCBaseSystem/VDCManager/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/UpDown/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/UpDown.h",
+            "HCBaseSystem/vdc.h"
+        ]
+        spec.public_header_files = [
+            "HCBaseSystem/VDCManager/*.h",
+            "HCBaseSystem/UpDown/*.h",
+            "HCBaseSystem/UpDown.h",
+            "HCBaseSystem/vdc.h"
+        ]
+        #spec.frameworks = []
+        spec.ios.dependency 'HCBaseSystem/User'
+    end
+    s.subspec 'ShareTM' do |spec|
+        spec.requires_arc            = true
+        spec.source_files = [
+        "HCBaseSystem/TM/*.{h,m,mm,cpp,c}",
+        "HCBaseSystem/Share/*.{h,m,mm,cpp,c}"
+        ]
+        spec.public_header_files = [
+            "HCBaseSystem/TM/*.h",
+            "HCBaseSystem/Share/*.h"
+        ]
+        #spec.frameworks = []
+        spec.ios.dependency 'HCBaseSystem/User'
     end
  end

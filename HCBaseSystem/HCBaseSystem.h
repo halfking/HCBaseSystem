@@ -88,8 +88,8 @@ FOUNDATION_EXPORT const unsigned char HCBaseSystemVersionString[];
 //#import <HCBaseSystem/LoginViewNew.h>
 #import <HCBaseSystem/SCGifImageView.h>
 //#import <HCBaseSystem/ShareView.h>
-//#import <HCBaseSystem/UIMLabel.h>
-//#import <HCBaseSystem/UIMLabelEx.h>
+#import <HCBaseSystem/UIMLabel.h>
+#import <HCBaseSystem/UIMLabelEx.h>
 #import <HCBaseSystem/UIPLaceHolderTextField.h>
 #import <HCBaseSystem/UIPlaceHolderTextView.h>
 #import <HCBaseSystem/UIWebImageViewN.h>
