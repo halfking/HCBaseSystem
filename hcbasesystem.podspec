@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "hccoren"
-  s.version      = "0.1.1"
-  s.summary      = "这是一个与业务无关的特定的核心库。"
+  s.name         = "hcbasesystem"
+  s.version      = "0.0.1"
+  s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
-这是一个特定的核心库。包含了常用的字串处理、网络处理、图片处理、压缩、正则、JSON、数据库及一个WebServer管理器。简化了外部引用的一些问题。
+这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
                    DESC
 
-  s.homepage     = "https://github.com/halfking/hccoren"
+  s.homepage     = "https://github.com/halfking/HCBaseSystem"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   s.license      = "MIT"
@@ -59,8 +59,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-s.source       = { :git => "https://github.com/halfking/hccoren.git", :tag => s.version,:submodules => true  }
-#s.source       = { :git => "http://github.com/halfking/hccoren.git", :tag => s.version }
+s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag => s.version,:submodules => true  }
+#s.source       = { :git => "http://github.com/halfking/hcbasesystem.git", :tag => s.version }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -102,125 +102,46 @@ s.source       = { :git => "https://github.com/halfking/hccoren.git", :tag => s.
   # s.library   = "iconv"
 #  s.libraries = "icucore","sqlite3.0","stdc++"
 
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
   # s.requires_arc = false
 
     s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES","ENABLE_BITCODE" => "YES","DEFINES_MODULE" => "YES" }
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-s.dependency "HCMinizip", "~> 1.2.6"
 
-#  s.default_subspec = 'All'
-#  s.subspec 'All' do |spec|
-#	spec.ios.dependency 'hccoren/REGEXKITLITE' '~>0.0.5'
-#    spec.ios.dependency 'hccoren/Core'          '~>0.0.5'
-#spec.ios.dependency 'hccoren/AsyncSocket'
-#  end
-#    s.subspec 'Minizip' do |spec|
-#        spec.requires_arc            = false
-#        spec.source_files = "hccoren/ZipArchive/MiniZip/*.{h,m,mm,c,cpp}"
-#        spec.public_header_files = [
-#            'hccoren/ZipArchive/MiniZip/*.h'
-#        ]
+    s.dependency "HCMinizip", "~> 1.2.6"
+    s.dependency "hccoren", "~> 0.1.1"
+    s.dependency "Qiniu", "~> 7.0"
+    s.dependency "UMengAnalytics-NO-IDFA"
+    s.dependency "TuSDK"
+    s.dependency "SDWebImage", "~>3.7.5"
+    s.dependency "AFNetworking", "~>2.6.3"
 
-#        spec.libraries = [
-#            "icucore","iconv","z"
-#        ]
-#    end
-    s.subspec 'Core' do |spec|
-        spec.requires_arc            = false
-        spec.source_files = [
-            "hccoren/String/**/*.{h,m,mm,c,cpp}",
-            "hccoren/Util/**/*.{h,m,mm,c,cpp}",
-#            "hccoren/ZipArchive/**/*.{h,m,mm,c,cpp}",
-            "hccoren/Data/*.{h,m,c,cpp}",
-            "hccoren/base/*.{h,m,mm,c,cpp}",
-            "hccoren/**/config.h",
-            "hccoren/**/Reachability.{h,m}",
-            "hccoren/UDI/**/*.{h,m,cpp,c}",
-            "hccoren/Map/*.{h,m}",
-            "hccoren/base.h"
-        ]
-        spec.public_header_files = [
-            'hccoren/String/**/*.h',
-            'hccoren/Util/**/*.h',
-#            'hccoren/ZipArchive/**/*.h',
-            'hccoren/Data/*.h',
-            'hccoren/Base/*.h',
-            'hccoren/**/config.h',
-            'hccoren/UDI/**/*.h',
-            'hccoren/**/Reachability.h',
-            'hccoren/Map/*.h',
-            'hccoren/base.h'
-        ]
-        spec.exclude_files = [
-            "hccoren/Util/HttpServerManager.{h,m,mm,c,cpp}",
-            "hccoren/Util/HWWeakTimer.{h,m}",
-            "hccoren/ZipArchive/**/*.{h,m,mm,c,cpp}",
-            "hccoren/ZipArchive/MiniZip/*.{h,m,mm,c,cpp}",
-            "hccoren/base/publictext.h"
-        ]
-        spec.libraries = [
-            'icucore',
-            'iconv',
-            'stdc++',
-            'stdc++.6',
-            'z'
-        ]
-        spec.frameworks = [
-            'UIKit',
-            'CoreLocation',
-            'QuartzCore',
-            'OpenGLES',
-            'SystemConfiguration',
-            'CoreGraphics',
-            'Security',
-            'IOKit'
-        ]
-        #spec.ios.dependency 'HCMinizip' '~>1.2.6'
-    end
-    s.subspec 'NetworkAndDatabase' do |spec|
+    s.dependency 'MOBFoundation_IDFA'
+    s.dependency 'SMSSDK'
+
+    s.subspec 'Ver' do |spec|
         spec.requires_arc            = true
         spec.source_files = [
-            "hccoren/Network/AsyncSocket/*.{h,m,mm,cpp,c}",
-            "hccoren/CMDBase/*.{h,m,mm,cpp,c}",
-            "hccoren/Database/*.{h,m,mm,cpp,c}",
-            "hccoren/Util/HttpServerManager.{h,m,mm,c,cpp}",
-            "hccoren/Network/CocoaWebResource/*.{h,m,mm,c,cpp}",
-            "hccoren/Network/BlueSession/*.{h,m,mm,c,cpp}",
-            "hccoren/database.h",
-            "hccoren/cmd.h"
+            "HCBaseSystem/iVersion/*.{h,m,mm,c,cpp}"
         ]
         spec.public_header_files = [
-            'hccoren/Network/AsyncSocket/*.h',
-            'hccoren/CMDBase/*.h',
-            'hccoren/Database/*.h',
-            'hccoren/Network/CocoaWebResource/*.h',
-            'hccoren/Network/BlueSession/*.h',
-            'hccoren/Util/HttpServerManager.h',
-            'hccoren/database.h',
-            'hccoren/cmd.h'
+            'HCBaseSystem/iVersion/*.h'
         ]
-        spec.libraries = [
-            "stdc++",
-            "stdc++.6","icucore","iconv","sqlite3.0"
+#        spec.exclude_files = []
+#        spec.libraries = []
+        spec.frameworks = [
+            'UIKit'
         ]
-        spec.ios.dependency 'hccoren/Core'
+        #spec.ios.dependency 'HCMinizip' '~>1.2.6'
     end
     s.subspec 'UIControls' do |spec|
         spec.requires_arc            = true
         spec.source_files = [
-            "hccoren/UIControls/*.{h,m,mm,cpp,c}",
-            "hccoren/images.h"
+            "HCBaseSystem/UIControls/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/imagecontrols.h"
         ]
         spec.public_header_files = [
-            'hccoren/UIControls/*.h',
-            'hccoren/images.h'
+            'HCBaseSystem/UIControls/*.h',
+            'HCBaseSystem/imagecontrols.h'
         ]
         spec.frameworks = [
             'UIKit',
@@ -230,6 +151,6 @@ s.dependency "HCMinizip", "~> 1.2.6"
             'OpenGLES',
             'SystemConfiguration'
         ]
-        spec.ios.dependency 'hccoren/Core'
+#spec.ios.dependency 'hccoren/Core'
     end
  end

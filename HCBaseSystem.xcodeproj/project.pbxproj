@@ -61,9 +61,6 @@
 		11ED41191CC7288B00561E33 /* TMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED41151CC7288B00561E33 /* TMManager.m */; };
 		11ED411D1CC72A3E00561E33 /* UMShareObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED411B1CC72A3E00561E33 /* UMShareObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED411E1CC72A3E00561E33 /* UMShareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED411C1CC72A3E00561E33 /* UMShareObject.m */; };
-		11ED41611CC72A5E00561E33 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11ED41201CC72A5E00561E33 /* SMS_SDKLocalizable.strings */; };
-		11ED41621CC72A5E00561E33 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ED41221CC72A5E00561E33 /* MOBFoundation.framework */; };
-		11ED41631CC72A5E00561E33 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ED41231CC72A5E00561E33 /* SMS_SDK.framework */; };
 		11ED41641CC72A5E00561E33 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11ED41291CC72A5E00561E33 /* UMSocialLocalizable.strings */; };
 		11ED41651CC72A5E00561E33 /* UMSocial.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED412C1CC72A5E00561E33 /* UMSocial.h */; };
 		11ED41661CC72A5E00561E33 /* UMSocialAccountManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED412D1CC72A5E00561E33 /* UMSocialAccountManager.h */; };
@@ -290,10 +287,6 @@
 		11ED41151CC7288B00561E33 /* TMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMManager.m; sourceTree = "<group>"; };
 		11ED411B1CC72A3E00561E33 /* UMShareObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMShareObject.h; sourceTree = "<group>"; };
 		11ED411C1CC72A3E00561E33 /* UMShareObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMShareObject.m; sourceTree = "<group>"; };
-		11ED41211CC72A5E00561E33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
-		11ED41221CC72A5E00561E33 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
-		11ED41231CC72A5E00561E33 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
-		11ED41241CC72A5E00561E33 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
 		11ED412A1CC72A5E00561E33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		11ED412C1CC72A5E00561E33 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		11ED412D1CC72A5E00561E33 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -487,8 +480,6 @@
 				11ED417D1CC72A5E00561E33 /* libWeiboSDK.a1 in Frameworks */,
 				11ED418F1CC72A5E00561E33 /* libWeChatSDK.a1 in Frameworks */,
 				11ED421B1CC7342000561E33 /* libGeTuiSdk-1.2.1.a1 in Frameworks */,
-				11ED41631CC72A5E00561E33 /* SMS_SDK.framework in Frameworks */,
-				11ED41621CC72A5E00561E33 /* MOBFoundation.framework in Frameworks */,
 				11ED418E1CC72A5E00561E33 /* libSocialWechat.a1 in Frameworks */,
 				0A65491F9D71FBD8692DB7CF /* libPods-HCBaseSystem.a in Frameworks */,
 			);
@@ -668,7 +659,6 @@
 		11ED411A1CC72A3E00561E33 /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				11ED411F1CC72A5E00561E33 /* SMS_SDK */,
 				11ED41251CC72A5E00561E33 /* UMSocial_Sdk_4.3 */,
 				11ED41281CC72A5E00561E33 /* UMSocial_Sdk_4.4 */,
 				11ED41431CC72A5E00561E33 /* UMSocial_Sdk_Extra_Frameworks */,
@@ -678,16 +668,6 @@
 				11ED42621CC8B6A700561E33 /* CMD_LogEvent.m */,
 			);
 			path = Share;
-			sourceTree = "<group>";
-		};
-		11ED411F1CC72A5E00561E33 /* SMS_SDK */ = {
-			isa = PBXGroup;
-			children = (
-				11ED41201CC72A5E00561E33 /* SMS_SDKLocalizable.strings */,
-				11ED41221CC72A5E00561E33 /* MOBFoundation.framework */,
-				11ED41231CC72A5E00561E33 /* SMS_SDK.framework */,
-			);
-			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
 		11ED41251CC72A5E00561E33 /* UMSocial_Sdk_4.3 */ = {
@@ -1155,7 +1135,6 @@
 				11ED41791CC72A5E00561E33 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				11ED418C1CC72A5E00561E33 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				11EFDE6B1CD1F37200DD2225 /* hcbasesystem.podspec in Resources */,
-				11ED41611CC72A5E00561E33 /* SMS_SDKLocalizable.strings in Resources */,
 				11EFDE6D1CD1F37200DD2225 /* hcbasesystemappstore.xcconfig in Resources */,
 				11ED41771CC72A5E00561E33 /* UMSnsAccountViewController.xib in Resources */,
 				11EFDE6F1CD1F37200DD2225 /* hcbasesystemdebug.xcconfig in Resources */,
@@ -1318,15 +1297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		11ED41201CC72A5E00561E33 /* SMS_SDKLocalizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11ED41211CC72A5E00561E33 /* en */,
-				11ED41241CC72A5E00561E33 /* zh-Hans */,
-			);
-			name = SMS_SDKLocalizable.strings;
-			sourceTree = "<group>";
-		};
 		11ED41291CC72A5E00561E33 /* UMSocialLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
