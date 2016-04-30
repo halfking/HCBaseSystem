@@ -13,5 +13,5 @@
 #import "HCUserSettings.h"
 #import "HCUserSummary.h"
 #import "UserManager.h"
-
+#import "config.h"
 #endif /* User_WT_h */

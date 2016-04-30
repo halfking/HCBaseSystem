@@ -16,4 +16,5 @@
 #import "CommonUtil(Date).h"
 #import "publicMControls.h"
 #import "RegexKitLite.h"
+#import "HCFileManager.h"
 #endif /* base_h */

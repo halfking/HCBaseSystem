@@ -59,12 +59,6 @@
 		11ED410E1CC7285C00561E33 /* UDManager(Helper).m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED41041CC7285C00561E33 /* UDManager(Helper).m */; };
 		11ED410F1CC7285C00561E33 /* UDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED41051CC7285C00561E33 /* UDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED41101CC7285C00561E33 /* UDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED41061CC7285C00561E33 /* UDManager.m */; };
-		11ED41161CC7288B00561E33 /* CMD_BindGTCID.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED41121CC7288B00561E33 /* CMD_BindGTCID.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11ED41171CC7288B00561E33 /* CMD_BindGTCID.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED41131CC7288B00561E33 /* CMD_BindGTCID.m */; };
-		11ED41181CC7288B00561E33 /* TMManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED41141CC7288B00561E33 /* TMManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11ED41191CC7288B00561E33 /* TMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED41151CC7288B00561E33 /* TMManager.m */; };
-		11ED411D1CC72A3E00561E33 /* UMShareObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED411B1CC72A3E00561E33 /* UMShareObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11ED411E1CC72A3E00561E33 /* UMShareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED411C1CC72A3E00561E33 /* UMShareObject.m */; };
 		11ED41961CC72B0900561E33 /* CMD_0001.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED41941CC72B0900561E33 /* CMD_0001.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED41971CC72B0900561E33 /* CMD_0001.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED41951CC72B0900561E33 /* CMD_0001.m */; };
 		11ED41AC1CC72B9400561E33 /* CMD_ChangeUserAvatar.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED41981CC72B9400561E33 /* CMD_ChangeUserAvatar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -138,8 +132,6 @@
 		11ED42591CC89D8A00561E33 /* VDCTempFileManager(readwriter).m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42421CC89D8A00561E33 /* VDCTempFileManager(readwriter).m */; };
 		11ED425A1CC89D8A00561E33 /* VDCTempFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42431CC89D8A00561E33 /* VDCTempFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED425B1CC89D8A00561E33 /* VDCTempFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42441CC89D8A00561E33 /* VDCTempFileManager.m */; };
-		11ED42631CC8B6A700561E33 /* CMD_LogEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42611CC8B6A700561E33 /* CMD_LogEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11ED42641CC8B6A700561E33 /* CMD_LogEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42621CC8B6A700561E33 /* CMD_LogEvent.m */; };
 		11ED42671CC8B7C100561E33 /* CMD_HeatBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42651CC8B7C100561E33 /* CMD_HeatBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED42681CC8B7C100561E33 /* CMD_HeatBeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42661CC8B7C100561E33 /* CMD_HeatBeat.m */; };
 		11ED426F1CC8BF8800561E33 /* QTimespan.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED426D1CC8BF8800561E33 /* QTimespan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -241,12 +233,6 @@
 		11ED41041CC7285C00561E33 /* UDManager(Helper).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UDManager(Helper).m"; sourceTree = "<group>"; };
 		11ED41051CC7285C00561E33 /* UDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDManager.h; sourceTree = "<group>"; };
 		11ED41061CC7285C00561E33 /* UDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDManager.m; sourceTree = "<group>"; };
-		11ED41121CC7288B00561E33 /* CMD_BindGTCID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_BindGTCID.h; sourceTree = "<group>"; };
-		11ED41131CC7288B00561E33 /* CMD_BindGTCID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_BindGTCID.m; sourceTree = "<group>"; };
-		11ED41141CC7288B00561E33 /* TMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMManager.h; sourceTree = "<group>"; };
-		11ED41151CC7288B00561E33 /* TMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMManager.m; sourceTree = "<group>"; };
-		11ED411B1CC72A3E00561E33 /* UMShareObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMShareObject.h; sourceTree = "<group>"; };
-		11ED411C1CC72A3E00561E33 /* UMShareObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMShareObject.m; sourceTree = "<group>"; };
 		11ED41941CC72B0900561E33 /* CMD_0001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_0001.h; sourceTree = "<group>"; };
 		11ED41951CC72B0900561E33 /* CMD_0001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_0001.m; sourceTree = "<group>"; };
 		11ED41981CC72B9400561E33 /* CMD_ChangeUserAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_ChangeUserAvatar.h; sourceTree = "<group>"; };
@@ -322,8 +308,6 @@
 		11ED42431CC89D8A00561E33 /* VDCTempFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCTempFileManager.h; sourceTree = "<group>"; };
 		11ED42441CC89D8A00561E33 /* VDCTempFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCTempFileManager.m; sourceTree = "<group>"; };
 		11ED42601CC8A2D500561E33 /* configForApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configForApp.h; sourceTree = "<group>"; };
-		11ED42611CC8B6A700561E33 /* CMD_LogEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_LogEvent.h; sourceTree = "<group>"; };
-		11ED42621CC8B6A700561E33 /* CMD_LogEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_LogEvent.m; sourceTree = "<group>"; };
 		11ED42651CC8B7C100561E33 /* CMD_HeatBeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_HeatBeat.h; sourceTree = "<group>"; };
 		11ED42661CC8B7C100561E33 /* CMD_HeatBeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_HeatBeat.m; sourceTree = "<group>"; };
 		11ED426D1CC8BF8800561E33 /* QTimespan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTimespan.h; sourceTree = "<group>"; };
@@ -451,8 +435,6 @@
 				11ED41931CC72AEA00561E33 /* CMDEX */,
 				11ED40801CC7237300561E33 /* Users */,
 				11ED40FC1CC7285C00561E33 /* UpDown */,
-				11ED41111CC7288B00561E33 /* TM */,
-				11ED411A1CC72A3E00561E33 /* Share */,
 				11ED437E1CC92CFA00561E33 /* UIControls */,
 				11ED41FC1CC72F8600561E33 /* PublicEnum.h */,
 				11ED402E1CC694D200561E33 /* HCBaseSystem.h */,
@@ -546,28 +528,6 @@
 				11ED41061CC7285C00561E33 /* UDManager.m */,
 			);
 			path = UpDown;
-			sourceTree = "<group>";
-		};
-		11ED41111CC7288B00561E33 /* TM */ = {
-			isa = PBXGroup;
-			children = (
-				11ED41121CC7288B00561E33 /* CMD_BindGTCID.h */,
-				11ED41131CC7288B00561E33 /* CMD_BindGTCID.m */,
-				11ED41141CC7288B00561E33 /* TMManager.h */,
-				11ED41151CC7288B00561E33 /* TMManager.m */,
-			);
-			path = TM;
-			sourceTree = "<group>";
-		};
-		11ED411A1CC72A3E00561E33 /* Share */ = {
-			isa = PBXGroup;
-			children = (
-				11ED411B1CC72A3E00561E33 /* UMShareObject.h */,
-				11ED411C1CC72A3E00561E33 /* UMShareObject.m */,
-				11ED42611CC8B6A700561E33 /* CMD_LogEvent.h */,
-				11ED42621CC8B6A700561E33 /* CMD_LogEvent.m */,
-			);
-			path = Share;
 			sourceTree = "<group>";
 		};
 		11ED41931CC72AEA00561E33 /* CMDEX */ = {
@@ -692,9 +652,7 @@
 				11ED43201CC8F12B00561E33 /* cmd_wt.h in Headers */,
 				11ED43261CC8F3BD00561E33 /* textresource.h in Headers */,
 				11ED422A1CC8804D00561E33 /* config.h in Headers */,
-				11ED411D1CC72A3E00561E33 /* UMShareObject.h in Headers */,
 				11ED409C1CC7237300561E33 /* HCUserConcern.h in Headers */,
-				11ED41181CC7288B00561E33 /* TMManager.h in Headers */,
 				11ED41D61CC72BD300561E33 /* CMDS_WT(base).h in Headers */,
 				114DE5F11CC9C687004BE152 /* vdc.h in Headers */,
 				11ED40A91CC7237300561E33 /* UserManager.h in Headers */,
@@ -743,12 +701,10 @@
 				11ED42451CC89D8A00561E33 /* HttpVideoFileResponse.h in Headers */,
 				11ED426F1CC8BF8800561E33 /* QTimespan.h in Headers */,
 				11ED42671CC8B7C100561E33 /* CMD_HeatBeat.h in Headers */,
-				11ED42631CC8B6A700561E33 /* CMD_LogEvent.h in Headers */,
 				11502F511CD2941800365412 /* MBProgressHUD.h in Headers */,
 				11ED424E1CC89D8A00561E33 /* VDCLoaderConnection.h in Headers */,
 				11ED42581CC89D8A00561E33 /* VDCTempFileManager(readwriter).h in Headers */,
 				11EFDE601CD1EFE200DD2225 /* iVersion.h in Headers */,
-				11ED41161CC7288B00561E33 /* CMD_BindGTCID.h in Headers */,
 				11ED40A01CC7237300561E33 /* HCUserSettings.h in Headers */,
 				11ED41D21CC72BD300561E33 /* CMDOP_WT.h in Headers */,
 				11ED41D41CC72BD300561E33 /* CMDS_WT.h in Headers */,
@@ -930,7 +886,6 @@
 				11ED40A11CC7237300561E33 /* HCUserSettings.m in Sources */,
 				11ED42591CC89D8A00561E33 /* VDCTempFileManager(readwriter).m in Sources */,
 				11ED41D31CC72BD300561E33 /* CMDOP_WT.m in Sources */,
-				11ED42641CC8B6A700561E33 /* CMD_LogEvent.m in Sources */,
 				11ED41DD1CC72BD300561E33 /* HCDBHelper(WT).m in Sources */,
 				11ED41E31CC72BD300561E33 /* UploadParameters.m in Sources */,
 				11ED41081CC7285C00561E33 /* CMD_GetDownloadToken.m in Sources */,
@@ -938,10 +893,8 @@
 				11ED42531CC89D8A00561E33 /* VDCManager(LocalFiles).m in Sources */,
 				11ED41AD1CC72B9400561E33 /* CMD_ChangeUserAvatar.m in Sources */,
 				11ED40A81CC7237300561E33 /* UserInformation.m in Sources */,
-				11ED41171CC7288B00561E33 /* CMD_BindGTCID.m in Sources */,
 				11ED40AA1CC7237300561E33 /* UserManager.m in Sources */,
 				11ED41B11CC72B9400561E33 /* CMD_GetUserInfo.m in Sources */,
-				11ED41191CC7288B00561E33 /* TMManager.m in Sources */,
 				11ED410C1CC7285C00561E33 /* UDInfo.m in Sources */,
 				11ED41AF1CC72B9400561E33 /* CMD_ChangeUserIntro.m in Sources */,
 				11ED41BF1CC72B9400561E33 /* CMD_UserLogout.m in Sources */,
@@ -973,7 +926,6 @@
 				11ED41BB1CC72B9400561E33 /* CMD_UpdateIP.m in Sources */,
 				11ED42511CC89D8A00561E33 /* VDCManager(Helper).m in Sources */,
 				11ED41BD1CC72B9400561E33 /* CMD_UserActivate.m in Sources */,
-				11ED411E1CC72A3E00561E33 /* UMShareObject.m in Sources */,
 				11ED41B71CC72B9400561E33 /* CMD_RegisterPushToken.m in Sources */,
 				11ED41B31CC72B9400561E33 /* CMD_Login.m in Sources */,
 				11ED43A61CC92CFA00561E33 /* UIWebImageViewN.m in Sources */,

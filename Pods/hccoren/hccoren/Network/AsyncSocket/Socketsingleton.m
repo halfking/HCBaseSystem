@@ -663,13 +663,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(Socketsingleton)
     }
 }
 #pragma CMD CALLBACK
--(BOOL) connectToServer:(id<HCNetworkDelegate>)delegate CMDs:(CMDs *)cmds
+-(BOOL) connectToServer:(NSObject<HCNetworkDelegate>*)delegate CMDs:(CMDs *)cmds
 {
     if(cmds_) PP_RELEASE(cmds_);
     cmds_ = PP_RETAIN(cmds);
     return [self connectToServer:delegate];
 }
--(BOOL) connectToServer:(id<HCNetworkDelegate>)delegate
+-(BOOL) connectToServer:(NSObject<HCNetworkDelegate> *)delegate
 {
     self.delegate = delegate;
     if(!self.IsInited)

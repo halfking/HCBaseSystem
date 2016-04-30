@@ -166,4 +166,5 @@
 //+(BOOL) isAllowNet;
 - (void) checkNetwork;
 - (void) networkTimeout:(NSNotification *)notification;
+
 @end

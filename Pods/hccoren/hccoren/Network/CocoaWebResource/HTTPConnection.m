@@ -16,7 +16,8 @@
 //#import "VDCManager.h"
 //#import "VDCManager(Helper).h"
 #import "RegexKitLite.h"
-#import "CommonUtil.h"
+//#import "CommonUtil.h"
+#import "HCFileManager.h"
 //#import "UDManager(Helper).h"
 //#import "HttpVideoFileResponse.h"
 
@@ -1960,7 +1961,7 @@ static NSMutableArray *recentNonces;
         
         [[NSNotificationCenter defaultCenter] postNotificationName:HTTPUploadingStartNotification object:[NSDictionary dictionaryWithObjectsAndKeys:fileName?fileName:@"",@"file",@"0.0",@"progress", nil]];
         
-        NSString *tmpName = [CommonUtil getMD5FileNameKeepExt:fileName defaultExt:@"mp3"];
+        NSString *tmpName = [HCFileManager getMD5FileNameKeepExt:fileName defaultExt:@"mp3"];
         
         NSFileManager *fm = [NSFileManager defaultManager];
         [fm createFileAtPath:tmpName contents:[NSData data] attributes:nil];

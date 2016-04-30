@@ -19,9 +19,13 @@
 #import "RegexKitLite.h"
 #import "Json.h"
 #import "config.h"
+#import "CommonUtil.h"
+
 @implementation DeviceConfig
 {
     int isCheckingNetwork_;
+  
+
 }
 //@synthesize HOST_IP1;
 //@synthesize HOST_PORT1;
@@ -852,5 +856,6 @@ static DeviceConfig * infor = nil;
 //        [[UserManager sharedUserManager]registerDevice:nil];
 //    }
 }
+
 @end
 

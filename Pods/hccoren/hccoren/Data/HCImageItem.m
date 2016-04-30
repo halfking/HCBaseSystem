@@ -16,7 +16,8 @@
 //#import "SystemConfiguration.h"
 //#import "HCUserSettings.h"
 //#import "UserManager.h"
-#import "CommonUtil.h"
+//#import "CommonUtil.h"
+#import "HCFileManager.h"
 @implementation HCImageItem
 @synthesize ImageID;
 @synthesize Title;
@@ -400,7 +401,7 @@
     //    /q/<quality>
     //    /format/<format>
     DeviceConfig * config = [DeviceConfig config];
-    if([CommonUtil isQiniuServer:src])
+    if([HCFileManager isQiniuServer:src])
     {
         NSMutableString * str = [[NSMutableString alloc]init];
         NSString * tempUrl = src.lowercaseString ;

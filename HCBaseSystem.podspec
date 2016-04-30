@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -97,14 +97,14 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
   #
 
   # s.framework  = "UIKit"
-  # s.frameworks = "UIKit", "Foundation"
+  # s.frameworks = "UIKit", "Foundation","TencentOpenAPI"
 
   # s.library   = "iconv"
 #  s.libraries = "icucore","sqlite3.0","stdc++"
 
   # s.requires_arc = false
 
-    s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES","ENABLE_BITCODE" => "YES","DEFINES_MODULE" => "YES" }
+    s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES","ENABLE_BITCODE" => "YES","DEFINES_MODULE" => "YES","HEADER_SEARCH_PATHS" => "$(inherited) $(PROJECT_DIR)/Lib","LIBRARY_SEARCH_PATHS" => "$(inherited) $(PROJECT_DIR)/Lib"}
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
     s.dependency "HCMinizip"
@@ -117,6 +117,7 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
 
     s.dependency 'MOBFoundation_IDFA'
     s.dependency 'SMSSDK'
+#s.dependency 'TencentOpenApiSDK','~> 2.9.5'
     s.dependency 'UMengSocial', '~> 5.0'
     s.dependency 'GTSDK', '~> 1.4.2-noidfa'
 
@@ -202,17 +203,17 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
         #spec.frameworks = []
         spec.ios.dependency 'HCBaseSystem/User'
     end
-    s.subspec 'ShareTM' do |spec|
-        spec.requires_arc            = true
-        spec.source_files = [
-            "HCBaseSystem/TM/*.{h,m,mm,cpp,c}",
-            "HCBaseSystem/Share/*.{h,m,mm,cpp,c}"
-        ]
-        spec.public_header_files = [
-            "HCBaseSystem/TM/*.h",
-            "HCBaseSystem/Share/*.h"
-        ]
-        #spec.frameworks = []
-        spec.ios.dependency 'HCBaseSystem/User'
-    end
+#    s.subspec 'ShareTM' do |spec|
+#        spec.requires_arc            = true
+#        spec.source_files = [
+#            "HCBaseSystem/TM/*.{h,m,mm,cpp,c}",
+#            "HCBaseSystem/Share/*.{h,m,mm,cpp,c}"
+#        ]
+#        spec.public_header_files = [
+#            "HCBaseSystem/TM/*.h",
+#            "HCBaseSystem/Share/*.h"
+#        ]
+#        #spec.frameworks = []
+#        spec.ios.dependency 'HCBaseSystem/User'
+#    end
  end

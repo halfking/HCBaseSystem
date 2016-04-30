@@ -13,7 +13,8 @@
 #import "WebSocket.h"
 #import "HTTPLogging.h"
 //#import "UDManager(Helper).h"
-#import "CommonUtil.h"
+//#import "CommonUtil.h"
+#import "HCFileManager.h"
 #if ! __has_feature(objc_arc)
 #warning This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
 #endif
@@ -843,7 +844,7 @@ static NSThread *bonjourThread;
         }
         NSString * sourceDir =  [NSBundle mainBundle].bundlePath;// [myBundle pathForResource:@"info" ofType:@"plist"];
         NSString * webSource = [sourceDir stringByAppendingPathComponent:@"docroot"];
-        [CommonUtil copyPath:webSource target:docroot overwrite:YES];
+        [HCFileManager copyPath:webSource target:docroot overwrite:YES];
 
 //        NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] bundlePath], @"docroot"];
 //        [manager createSymbolicLinkAtPath:docroot withDestinationPath:path error:&error];

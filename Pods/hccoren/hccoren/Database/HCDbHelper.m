@@ -5,7 +5,8 @@
 #import "HCDBHelper-init.h"
 #import "HCImageItem.h"
 #import "QCMDUpdateTime.h"
-#import "CommonUtil.h"
+//#import "CommonUtil.h"
+#import "HCFileManager.h"
 #import "JSON.h"
 #import <sqlite3.h>
 #include <pthread.h>
@@ -35,7 +36,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(DBHelper)
         //if db not exists
         if([fileManager fileExistsAtPath:sourcePath])
         {
-            BOOL result = [CommonUtil unZipFileFrom:sourcePath to:targetPath];
+            BOOL result = [HCFileManager unZipFileFrom:sourcePath to:targetPath];
             if (result) {
                 //            [fileManager removeItemAtPath:sourcePath error:nil];
                 return YES;

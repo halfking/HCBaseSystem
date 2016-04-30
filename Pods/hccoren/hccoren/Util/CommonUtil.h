@@ -89,7 +89,7 @@
 + (BOOL)    hasChinese:(NSString *)str;
 + (NSString *) leftFillZero:(NSString *)orgString withLength:(int)length;
 + (NSString *) stringWithFixedLength:(NSInteger)number withLength:(int)length;
-+ (BOOL)    unZipFileFrom:(NSString *)source to:(NSString *)destination;
+//+ (BOOL)    unZipFileFrom:(NSString *)source to:(NSString *)destination;
 
 + (CGSize)  sizeOfString:(NSString *)aStr
               withFont:(UIFont *)aFont
@@ -103,14 +103,15 @@
                     height:(NSInteger)aHeight;
 
 + (NSString *)get_uuid;
-#pragma mark - files
-+ (void)    createFileDirectory:(NSString *)dirFullPath;
-+ (BOOL)    createFileDirectories:(NSString * )path;
-+ (void)    movePath:(NSString *)sourcePath target:(NSString *)targetPath overwrite:(BOOL)overwriter;
-+ (void)    copyPath:(NSString *)sourcePath target:(NSString *)targetPath overwrite:(BOOL)overwriter;
-+ (void)    copyFile:(NSString *)sourceFile target:(NSString *)targetFile overwrite:(BOOL)overwriter;
-+ (BOOL)    isExistsFile:(NSString *)filePath;
-+ (BOOL)    isFileExistAndNotEmpty:(NSString *)filePath size:(UInt64 *)size;
+//#pragma mark - files
+//+ (void)    createFileDirectory:(NSString *)dirFullPath;
+//+ (BOOL)    createFileDirectories:(NSString * )path;
+//+ (void)    movePath:(NSString *)sourcePath target:(NSString *)targetPath overwrite:(BOOL)overwriter;
+//+ (void)    copyPath:(NSString *)sourcePath target:(NSString *)targetPath overwrite:(BOOL)overwriter;
+//+ (void)    copyFile:(NSString *)sourceFile target:(NSString *)targetFile overwrite:(BOOL)overwriter;
+//+ (BOOL)    isExistsFile:(NSString *)filePath;
+//+ (BOOL)    isFileExistAndNotEmpty:(NSString *)filePath size:(UInt64 *)size;
+
 #pragma mark - rect
 //用SourceSize的东东，填充满RectangeSize时，应该的大小
 + (CGSize)  sizeFillWithScale:(CGSize)sourceSize rectangeSize:(CGSize)rectangeSize;
@@ -123,16 +124,18 @@
 + (CGRect)fixRect:(CGRect)rect;
 + (CGRect)fixRect:(CGRect)rect canBeHalf:(BOOL)canBeHalf;
 
-+ (BOOL)    isQiniuServer:(NSString *)urlString;
-+ (NSString *)checkPath:(NSString *)path;
-+ (BOOL)    isLocalFile:(NSString *)urlString;
-+ (BOOL)    isImageFile:(NSString *)filePath;
-+ (BOOL)    isVideoFile:(NSString *)filePath;
-+ (BOOL)    isInAblum:(NSString *)path;
-+ (NSString *)getFileExtensionName:(NSString *)orgPath  defaultExt:(NSString *)defaultExt;
-+ (NSString *)getMD5FileNameKeepExt:(NSString *)orgPath defaultExt:(NSString *)defaultExt;
-+ (BOOL)    checkUrlIsExists:(NSString *)urlString contengLength:(UInt64*)contentLength level:(int *)level;
-+ (BOOL)    isUrlOK:(NSString *)urlString;
+//+ (BOOL)    isQiniuServer:(NSString *)urlString;
+//+ (NSString *)checkPath:(NSString *)path;
+//+ (BOOL)    isLocalFile:(NSString *)urlString;
+//+ (BOOL)    isImageFile:(NSString *)filePath;
+//+ (BOOL)    isVideoFile:(NSString *)filePath;
+//+ (BOOL)    isInAblum:(NSString *)path;
+//+ (NSString *)getFileExtensionName:(NSString *)orgPath  defaultExt:(NSString *)defaultExt;
+//+ (NSString *)getMD5FileNameKeepExt:(NSString *)orgPath defaultExt:(NSString *)defaultExt;
+//+ (BOOL)    checkUrlIsExists:(NSString *)urlString contengLength:(UInt64*)contentLength level:(int *)level;
+//+ (BOOL)    isUrlOK:(NSString *)urlString;
+//
+//+ (void)    SaveImageFile:(NSString *)filePath image:(UIImage *)image;
 
-+ (void)    SaveImageFile:(NSString *)filePath image:(UIImage *)image;
+
 @end

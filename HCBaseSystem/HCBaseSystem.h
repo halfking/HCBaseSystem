@@ -74,10 +74,10 @@ FOUNDATION_EXPORT const unsigned char HCBaseSystemVersionString[];
 #import <HCBaseSystem/UDInfo.h>
 #import <HCBaseSystem/UDManager(Helper).h>
 #import <HCBaseSystem/UDManager.h>
-#import <HCBaseSystem/CMD_BindGTCID.h>
-#import <HCBaseSystem/TMManager.h>
-#import <HCBaseSystem/UMSHareObject.h>
-#import <HCBaseSystem/PageTag.h>
+//#import <HCBaseSystem/CMD_BindGTCID.h>
+//#import <HCBaseSystem/TMManager.h>
+//#import <HCBaseSystem/UMSHareObject.h>
+//#import <HCBaseSystem/PageTag.h>
 //#import <HCBaseSystem/MTVLocal.h>
 //#import <HCBaseSystem/PlayRecord.h>
 #import <HCBaseSystem/CMD_HeatBeat.h>

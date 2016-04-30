@@ -1,7 +1,7 @@
 #import "HTTPFileResponse.h"
 #import "HTTPConnection.h"
 #import "HTTPLogging.h"
-#import "CommonUtil.h"
+#import "HCFileManager.h"
 #import <unistd.h>
 #import <fcntl.h>
 //#import "VDCManager.h"
@@ -46,7 +46,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
         
         //get real filesize,even not downloaded.
         UInt64  size = 0;
-        if([CommonUtil isFileExistAndNotEmpty:fpath size:&size])
+        if([HCFileManager isFileExistAndNotEmpty:fpath size:&size])
         {
             fileLength = size;
         }

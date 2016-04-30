@@ -47,8 +47,8 @@
 + (Socketsingleton *)     sharedSocketsingleton;
 -(int)  sendData:(NSData *)data withTimeout:(NSTimeInterval)timeout tag:(long)tag;
 -(void) disconnectToMina;
--(BOOL) connectToServer:(id<HCNetworkDelegate>)delegate;
--(BOOL) connectToServer:(id<HCNetworkDelegate>)delegate CMDs:(CMDs *)cmds;
+-(BOOL) connectToServer:(NSObject<HCNetworkDelegate> *)delegate;
+-(BOOL) connectToServer:(NSObject<HCNetworkDelegate> *)delegate CMDs:(CMDs *)cmds;
 -(void) clearDelegate;
 -(void) removeSocket;
 -(BOOL) needConnectLater;
