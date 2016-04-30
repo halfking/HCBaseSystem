@@ -10,4 +10,5 @@
 #define database_wt_h
 #import "HCDBHelper(WT).h"
 #import "HCDBHelper-initWT.h"
+#import "HCCallResultForWT.h"
 #endif /* database_wt_h */
