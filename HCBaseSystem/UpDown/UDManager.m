@@ -755,7 +755,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UDManager)
             {
                 long long size = [[attributes objectForKey:NSFileSize]longLongValue];
                 UInt64 size2 = 0;
-                if([CommonUtil checkUrlIsExists:fileUrl contengLength:&size2 level:0])
+                if([HCFileManager checkUrlIsExists:fileUrl contengLength:&size2 level:0])
                 {
                     if(size2 == size)
                     {
@@ -882,7 +882,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UDManager)
     if(!item) return NO;
     
     //get token
-    if(![CommonUtil isQiniuServer:item.RemoteUrl])
+    if(![HCFileManager isQiniuServer:item.RemoteUrl])
     {
         [self startDownloadByItem:item delegate:delegate];
         return YES;

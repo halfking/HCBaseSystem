@@ -339,7 +339,7 @@ static long childQueueItemCount = 0;
     item.readyCall = nil;
     item.downloadedCall = nil;
     item.progressCall = nil;
-    if(urlString && ![CommonUtil isLocalFile:urlString])
+    if(urlString && ![HCFileManager isLocalFile:urlString])
     {
 //        NSLog(@"参数错误:%@(需要URL)",urlString);
 //        BOOL isExists = NO;
@@ -402,7 +402,7 @@ static long childQueueItemCount = 0;
 - (VDCItem *) getVDCItemByURL:(NSString *)urlString checkFiles:(BOOL)checkFiles
 {
     NSString * key = nil;
-    if([CommonUtil isLocalFile:urlString])
+    if([HCFileManager isLocalFile:urlString])
     {
         key = [self getKeyFromLocalPath:urlString];
     }
@@ -856,7 +856,7 @@ static long childQueueItemCount = 0;
     if(item)
     {
         UInt64 contentLength = 0;
-        [CommonUtil checkUrlIsExists:item.remoteUrl contengLength:&contentLength level:nil];
+        [HCFileManager checkUrlIsExists:item.remoteUrl contengLength:&contentLength level:nil];
         if(contentLength>0)
             item.contentLength = contentLength;
         
@@ -1037,7 +1037,7 @@ static long childQueueItemCount = 0;
         }
         if(newPath && item.AudioPath)
         {
-            [CommonUtil copyFile:newPath target:item.AudioPath overwrite:NO];
+            [HCFileManager copyFile:newPath target:item.AudioPath overwrite:NO];
             NSLog(@"copy audiopath %@ to %@",newPath,item.AudioPath);
         }
     }
@@ -1045,7 +1045,7 @@ static long childQueueItemCount = 0;
 - (BOOL)checkRemoteUrl:(VDCItem*)item
 {
     if(!item.remoteUrl || item.remoteUrl.length<=3) return NO;
-    if([CommonUtil isLocalFile:item.remoteUrl])
+    if([HCFileManager isLocalFile:item.remoteUrl])
     {
         item.localFileName = [[UDManager sharedUDManager]getFileName:item.remoteUrl];
         
@@ -1070,7 +1070,7 @@ static long childQueueItemCount = 0;
         item.localFileName = [self getFilePathForLocalUrl:localWebUrl];
     }
     NSString * filePath = item.localFilePath;
-    if([CommonUtil isLocalFile:filePath])
+    if([HCFileManager isLocalFile:filePath])
     {
         UInt64 size = [[UDManager sharedUDManager] fileSizeAtPath:filePath];
         if(size>0){
@@ -1084,7 +1084,7 @@ static long childQueueItemCount = 0;
     if(item.contentLength<=DEFAULT_PKSIZE)
     {
         UInt64 size = 0;
-        if([CommonUtil checkUrlIsExists:item.remoteUrl contengLength:&size level:nil])
+        if([HCFileManager checkUrlIsExists:item.remoteUrl contengLength:&size level:nil])
         {
             item.contentLength = size;
         }
@@ -1181,7 +1181,7 @@ static long childQueueItemCount = 0;
     {
         NSLog(@" parameter cannot be nil ;");
     }
-    else if([CommonUtil isLocalFile:urlString]) //如果是本地文件，则只需要检查音频是否正确
+    else if([HCFileManager isLocalFile:urlString]) //如果是本地文件，则只需要检查音频是否正确
     {
         NSString * newPath = nil;
         BOOL isExist = NO;
@@ -1942,7 +1942,7 @@ static long childQueueItemCount = 0;
 {
     NSURL * localUrl =  [NSURL URLWithString: item.localWebUrl];
     NSURL * remoteUrl = [NSURL URLWithString:item.remoteUrl];
-    if(item.localFilePath && [CommonUtil isFileExistAndNotEmpty:item.localFilePath size:nil])
+    if(item.localFilePath && [HCFileManager isFileExistAndNotEmpty:item.localFilePath size:nil])
     {
         localUrl = [NSURL fileURLWithPath:item.localFilePath];
         remoteUrl = localUrl;

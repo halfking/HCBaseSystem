@@ -534,23 +534,23 @@
 - (BOOL)checkAllDireictories
 {
     NSString * path = [self localFileDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     path = [self tempFileDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     path = [self recordDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     path = [self coverStoryFileDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     path = [self outputFileDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     path = [self webRootFileDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     path = [self convertFileDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     path = [self lyricFilrDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     path = [self mtvPlusFileDir];
-    [CommonUtil createFileDirectories:[self getFilePath:path]];
+    [HCFileManager createFileDirectories:[self getFilePath:path]];
     return YES;
 }
 - (NSString *)getApplicationPath
@@ -625,7 +625,7 @@
         return nil;
     }
     
-    orgPath = [CommonUtil checkPath:orgPath];
+    orgPath = [HCFileManager checkPath:orgPath];
     NSFileManager * fm = [NSFileManager defaultManager];
     if([fm fileExistsAtPath:orgPath])
     {
@@ -1182,7 +1182,7 @@
     {
         orgFileName = @"";
     }
-    if([CommonUtil isLocalFile:orgFileName])
+    if([HCFileManager isLocalFile:orgFileName])
     {
         orgFileName = [orgFileName lastPathComponent];
     }
@@ -1243,7 +1243,7 @@
     if(!urlString ||urlString.length<5) return nil;
     
     NSURL *lrcurl = [NSURL URLWithString:urlString];
-    NSString * fileName = [CommonUtil getMD5FileNameKeepExt:urlString defaultExt:ext];
+    NSString * fileName = [HCFileManager getMD5FileNameKeepExt:urlString defaultExt:ext];
     NSString * cacheFile = [[UDManager sharedUDManager]tempFileFullPath:fileName];
     NSError * error = nil;
     NSString * content = nil;
@@ -1282,7 +1282,7 @@
     if(!urlString ||urlString.length<5) return nil;
     
     NSURL *lrcurl = [NSURL URLWithString:urlString];
-    NSString * fileName = [CommonUtil getMD5FileNameKeepExt:urlString defaultExt:ext];
+    NSString * fileName = [HCFileManager getMD5FileNameKeepExt:urlString defaultExt:ext];
     //    NSString * cacheFile = [[UDManager sharedUDManager]tempFileFullPath:fileName];
     NSString * cacheFile =  [[self getFilePath:[self lyricFilrDir]]stringByAppendingPathComponent:fileName];
     NSError * error = nil;
@@ -1319,11 +1319,11 @@
 }
 - (BOOL)getImageDataFromUrl:(NSString *)urlString size:(CGSize)size completed:(void(^)(UIImage * image,NSError * error))completed
 {
-    if(![CommonUtil isUrlOK:urlString])
+    if(![HCFileManager isUrlOK:urlString])
     {
-        if([CommonUtil isExistsFile:urlString])
+        if([HCFileManager isExistsFile:urlString])
         {
-            UIImage * image = [UIImage imageWithContentsOfFile:[CommonUtil checkPath:urlString]];
+            UIImage * image = [UIImage imageWithContentsOfFile:[HCFileManager checkPath:urlString]];
             completed(image,nil);
         }
         else

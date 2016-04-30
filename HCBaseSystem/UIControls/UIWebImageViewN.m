@@ -151,7 +151,7 @@
 }
 - (BOOL) isQiniuServer:(NSString *)urlString
 {
-    return [CommonUtil isQiniuServer:urlString];
+    return [HCFileManager isQiniuServer:urlString];
 }
 - (void)setHolderImage:(UIImage *)placeholder
 {
@@ -219,7 +219,7 @@
     
     url = [HCImageItem urlWithWH:urlString width:width height:height mode:mode];
     
-    if([CommonUtil isInAblum:url] ==NO && [CommonUtil isLocalFile:url]==NO)
+    if([HCFileManager isInAblum:url] ==NO && [HCFileManager isLocalFile:url]==NO)
     {
         NSString * encodingString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
@@ -253,7 +253,7 @@
     else
     {
         //NSString * documentsPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-        url = [CommonUtil checkPath:url];
+        url = [HCFileManager checkPath:url];
         //        if(url && [url hasPrefix:@"file://"])
         //            url = [url substringFromIndex:7];
         

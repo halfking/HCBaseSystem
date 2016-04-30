@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.0.6"
+  s.version      = "0.0.8"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -107,8 +107,8 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
     s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES","ENABLE_BITCODE" => "YES","DEFINES_MODULE" => "YES" }
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
-    s.dependency "HCMinizip", "~> 1.2.6"
-    s.dependency "hccoren", "~> 0.1.2"
+    s.dependency "HCMinizip"
+    s.dependency "hccoren"
     s.dependency "Qiniu", "~> 7.0"
     s.dependency "UMengAnalytics-NO-IDFA"
     s.dependency "TuSDK"
@@ -143,7 +143,8 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
         ]
         spec.exclude_files = [
             "HCBaseSystem/UIControls/LoginViewNew.{h,m,mm,cpp,c}",
-            "HCBaseSystem/UIControls/ShareView.{h,m,mm,cpp,c}"
+            "HCBaseSystem/UIControls/ShareView.{h,m,mm,cpp,c}",
+#            "HCBaseSystem/UIControls/MBProgressHUD.{h,m,mm,cpp,c}"
         ]
         spec.public_header_files = [
             'HCBaseSystem/UIControls/*.h',
@@ -187,5 +188,31 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
             "HCBaseSystem/PublicEnum.h",
         ]
         #spec.frameworks = []
+    end
+    s.subspec 'VDC' do |spec|
+        spec.requires_arc            = true
+        spec.source_files = [
+            "HCBaseSystem/VDCManager/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/vdc.h"
+        ]
+        spec.public_header_files = [
+            "HCBaseSystem/VDCManager/*.h",
+            "HCBaseSystem/vdc.h"
+        ]
+        #spec.frameworks = []
+        spec.ios.dependency 'HCBaseSystem/User'
+    end
+    s.subspec 'ShareTM' do |spec|
+        spec.requires_arc            = true
+        spec.source_files = [
+            "HCBaseSystem/TM/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/Share/*.{h,m,mm,cpp,c}"
+        ]
+        spec.public_header_files = [
+            "HCBaseSystem/TM/*.h",
+            "HCBaseSystem/Share/*.h"
+        ]
+        #spec.frameworks = []
+        spec.ios.dependency 'HCBaseSystem/User'
     end
  end

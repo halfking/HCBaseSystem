@@ -30,7 +30,7 @@
     if(!item.remoteUrl || item.remoteUrl.length==0)
     {
         VDCItem * orgItem = [self getDownloadItemFromFile:item.tempFilePath];
-        if(orgItem && orgItem.remoteUrl && orgItem.remoteUrl.length>0 && [CommonUtil isLocalFile:orgItem.remoteUrl]==NO)
+        if(orgItem && orgItem.remoteUrl && orgItem.remoteUrl.length>0 && [HCFileManager isLocalFile:orgItem.remoteUrl]==NO)
             item.remoteUrl = orgItem.remoteUrl;
     }
     if(item.contentLength <=DEFAULT_PKSIZE * 2)
@@ -39,10 +39,10 @@
         
         if(item.contentLength <=0 && item.remoteUrl && item.remoteUrl.length>0)
         {
-            if([CommonUtil isLocalFile:item.remoteUrl])
+            if([HCFileManager isLocalFile:item.remoteUrl])
             {
                 UInt64 fileSize = 0;
-                if([CommonUtil isFileExistAndNotEmpty:item.remoteUrl size:&fileSize])
+                if([HCFileManager isFileExistAndNotEmpty:item.remoteUrl size:&fileSize])
                 {
                     item.contentLength = fileSize;
                 }

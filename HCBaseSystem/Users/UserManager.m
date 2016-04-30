@@ -1308,8 +1308,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
 - (void)downloadUserAvatarThirdPart:(NSString *)avatarUrl
 {
     NSString * userAvatar = avatarUrl;
-    if(!userAvatar || [CommonUtil isQiniuServer:userAvatar]) return; //本地图片，不需要处理
-    if([CommonUtil isLocalFile:userAvatar])
+    if(!userAvatar || [HCFileManager isQiniuServer:userAvatar]) return; //本地图片，不需要处理
+    if([HCFileManager isLocalFile:userAvatar])
     {
         [self uploadUserAvatar:userAvatar];
     }
@@ -1329,7 +1329,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
 }
 - (void)uploadUserAvatar:(NSString *)filePath
 {
-   if(!filePath  || ![CommonUtil isFileExistAndNotEmpty:filePath size:nil])
+   if(!filePath  || ![HCFileManager isFileExistAndNotEmpty:filePath size:nil])
    {
        NSLog(@"file: %@ not exists.",filePath);
        return;

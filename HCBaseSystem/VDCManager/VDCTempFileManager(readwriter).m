@@ -253,7 +253,7 @@
     if(!currentItem_) return NO;
     if(currentItem_.localFilePath && currentItem_.localFilePath.length>2)
     {
-        if(![CommonUtil isFileExistAndNotEmpty:currentItem_.localFilePath size:nil])
+        if(![HCFileManager isFileExistAndNotEmpty:currentItem_.localFilePath size:nil])
         {
             if(currentItem_.tempFileList && currentItem_.tempFileList.count>1)
             {

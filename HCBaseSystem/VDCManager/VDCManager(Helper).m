@@ -84,7 +84,7 @@
     if([Reachability networkAvailable])
     {
         UInt64 length = 0;
-        if([CommonUtil checkUrlIsExists:urlString contengLength:&length level:nil])
+        if([HCFileManager checkUrlIsExists:urlString contengLength:&length level:nil])
         {
             return (NSInteger)length;
         }
