@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.1.2"
+  s.version      = "0.1.4"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -104,7 +104,8 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
 
   # s.requires_arc = false
 
-    s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES","ENABLE_BITCODE" => "YES","DEFINES_MODULE" => "YES","HEADER_SEARCH_PATHS" => "$(inherited) $(PROJECT_DIR)/Lib","LIBRARY_SEARCH_PATHS" => "$(inherited) $(PROJECT_DIR)/Lib"}
+s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES","ENABLE_BITCODE" => "YES","DEFINES_MODULE" => "YES"}
+#,"HEADER_SEARCH_PATHS" => "$(inherited) $(PROJECT_DIR)/Lib","LIBRARY_SEARCH_PATHS" => "$(inherited) $(PROJECT_DIR)/Lib"}
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
     s.dependency "HCMinizip"
@@ -173,7 +174,7 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
 #            "HCBaseSystem/Users/CMD_0001.{h,m}",
             "HCBaseSystem/cmd_wt.h",
             "HCBaseSystem/database_wt.h",
-            "HCBaseSystem/PublicEnum.h",
+            "HCBaseSystem/PublicEnum.h"
         ]
         spec.public_header_files = [
             'HCBaseSystem/CMDEX/*.h',
@@ -186,11 +187,11 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
 #            'HCBaseSystem/Users/CMD_0001.h',
             'HCBaseSystem/cmd_wt.h',
             "HCBaseSystem/database_wt.h",
-            "HCBaseSystem/PublicEnum.h",
+            "HCBaseSystem/PublicEnum.h"
         ]
         #spec.frameworks = []
     end
-    s.subspec 'VDC' do |spec|
+    s.subspec 'VDCManager' do |spec|
         spec.requires_arc            = true
         spec.source_files = [
             "HCBaseSystem/VDCManager/*.{h,m,mm,cpp,c}",
