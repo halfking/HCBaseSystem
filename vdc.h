@@ -15,5 +15,6 @@
 #import "VDCManager.h"
 #import "VDCManager(LocalFiles).h"
 #import "VDCManager(Helper).h"
+#import <hccoren/HCFileManager.h>
 
 #endif /* vdc_h */
