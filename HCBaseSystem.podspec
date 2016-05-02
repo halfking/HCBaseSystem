@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.1.4"
+  s.version      = "0.1.6"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -111,16 +111,16 @@ s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES",
     s.dependency "HCMinizip"
     s.dependency "hccoren"
     s.dependency "Qiniu", "~> 7.0"
-    s.dependency "UMengAnalytics-NO-IDFA"
-    s.dependency "TuSDK"
+#s.dependency "UMengAnalytics-NO-IDFA"
+#s.dependency "TuSDK"
     s.dependency "SDWebImage", "~>3.7.5"
     s.dependency "AFNetworking", "~>2.6.3"
 
-    s.dependency 'MOBFoundation_IDFA'
-    s.dependency 'SMSSDK'
+#s.dependency 'MOBFoundation_IDFA'
+#s.dependency 'SMSSDK'
 #s.dependency 'TencentOpenApiSDK','~> 2.9.5'
-    s.dependency 'UMengSocial', '~> 5.0'
-    s.dependency 'GTSDK', '~> 1.4.2-noidfa'
+#s.dependency 'UMengSocial', '~> 5.0'
+#s.dependency 'GTSDK', '~> 1.4.2-noidfa'
 
     s.subspec 'Ver' do |spec|
         spec.requires_arc            = true
