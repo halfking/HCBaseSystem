@@ -3,7 +3,7 @@ platform :ios, ‘7.0‘
 target “HCBaseSystem” do
 
 	pod 'HCMinizip'
-	pod 'hccoren','~> 0.1.5'
+	pod 'hccoren','~> 0.1.7'
 
 	pod 'Qiniu', '~> 7.0'
     #pod 'UMengAnalytics-NO-IDFA'
