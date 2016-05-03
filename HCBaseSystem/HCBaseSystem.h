@@ -93,6 +93,10 @@ FOUNDATION_EXPORT const unsigned char HCBaseSystemVersionString[];
 #import <HCBaseSystem/UIPLaceHolderTextField.h>
 #import <HCBaseSystem/UIPlaceHolderTextView.h>
 #import <HCBaseSystem/UIWebImageViewN.h>
+#import <HCBaseSystem/SevenSwitch.h>
+#import <HCBaseSystem/HMSegmentedControl.h>
+#import <HCBaseSystem/NSString+FontAwesome.h>
+#import <HCBaseSystem/UIButton+Bootstrap.h>
 
 #import <HCBaseSystem/iVersion.h>
 

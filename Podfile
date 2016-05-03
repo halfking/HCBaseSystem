@@ -3,11 +3,11 @@ platform :ios, ‘7.0‘
 target “HCBaseSystem” do
 
 	pod 'HCMinizip'
-	pod 'hccoren','~> 0.1.4'
+	pod 'hccoren','~> 0.1.5'
 
 	pod 'Qiniu', '~> 7.0'
-	pod 'UMengAnalytics-NO-IDFA'
-	pod 'TuSDK'
+    #pod 'UMengAnalytics-NO-IDFA'
+    #pod 'TuSDK'
 	pod 'SDWebImage', '~>3.7.5'
     pod 'AFNetworking', '~>2.6.3'
     

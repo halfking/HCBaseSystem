@@ -25,8 +25,22 @@
 		114DE5F11CC9C687004BE152 /* vdc.h in Headers */ = {isa = PBXBuildFile; fileRef = 114DE5F01CC9C573004BE152 /* vdc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11502F4B1CD285B300365412 /* HXNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 11502F491CD285B300365412 /* HXNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11502F4C1CD285B300365412 /* HXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 11502F4A1CD285B300365412 /* HXNetwork.m */; };
-		11502F511CD2941800365412 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 11502F4F1CD2941800365412 /* MBProgressHUD.h */; };
+		11502F511CD2941800365412 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 11502F4F1CD2941800365412 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11502F521CD2941800365412 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 11502F501CD2941800365412 /* MBProgressHUD.m */; };
+		11754EB11CD84E1B00F4DA09 /* SevenSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754EAF1CD84E1B00F4DA09 /* SevenSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11754EB21CD84E1B00F4DA09 /* SevenSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754EB01CD84E1B00F4DA09 /* SevenSwitch.m */; };
+		11754EB31CD84E1B00F4DA09 /* SevenSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754EB01CD84E1B00F4DA09 /* SevenSwitch.m */; };
+		11754EC31CD84E4D00F4DA09 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11754EB51CD84E4D00F4DA09 /* FontAwesome.ttf */; };
+		11754EC41CD84E4D00F4DA09 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11754EB51CD84E4D00F4DA09 /* FontAwesome.ttf */; };
+		11754EC51CD84E4D00F4DA09 /* NSString+FontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754EB61CD84E4D00F4DA09 /* NSString+FontAwesome.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11754EC61CD84E4D00F4DA09 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754EB71CD84E4D00F4DA09 /* NSString+FontAwesome.m */; };
+		11754EC71CD84E4D00F4DA09 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754EB71CD84E4D00F4DA09 /* NSString+FontAwesome.m */; };
+		11754EC81CD84E4D00F4DA09 /* UIButton+Bootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754EB81CD84E4D00F4DA09 /* UIButton+Bootstrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11754EC91CD84E4D00F4DA09 /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754EB91CD84E4D00F4DA09 /* UIButton+Bootstrap.m */; };
+		11754ECA1CD84E4D00F4DA09 /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754EB91CD84E4D00F4DA09 /* UIButton+Bootstrap.m */; };
+		11754F031CD84F0100F4DA09 /* HMSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F011CD84F0100F4DA09 /* HMSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11754F041CD84F0100F4DA09 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F021CD84F0100F4DA09 /* HMSegmentedControl.m */; };
+		11754F051CD84F0100F4DA09 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F021CD84F0100F4DA09 /* HMSegmentedControl.m */; };
 		11ED402F1CC694D200561E33 /* HCBaseSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED402E1CC694D200561E33 /* HCBaseSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED40361CC694D200561E33 /* HCBaseSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ED402B1CC694D200561E33 /* HCBaseSystem.framework */; };
 		11ED403B1CC694D200561E33 /* HCBaseSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED403A1CC694D200561E33 /* HCBaseSystemTests.m */; };
@@ -197,6 +211,15 @@
 		11502F4A1CD285B300365412 /* HXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNetwork.m; sourceTree = "<group>"; };
 		11502F4F1CD2941800365412 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		11502F501CD2941800365412 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		11754EAF1CD84E1B00F4DA09 /* SevenSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenSwitch.h; sourceTree = "<group>"; };
+		11754EB01CD84E1B00F4DA09 /* SevenSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenSwitch.m; sourceTree = "<group>"; };
+		11754EB51CD84E4D00F4DA09 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		11754EB61CD84E4D00F4DA09 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		11754EB71CD84E4D00F4DA09 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		11754EB81CD84E4D00F4DA09 /* UIButton+Bootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Bootstrap.h"; sourceTree = "<group>"; };
+		11754EB91CD84E4D00F4DA09 /* UIButton+Bootstrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Bootstrap.m"; sourceTree = "<group>"; };
+		11754F011CD84F0100F4DA09 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		11754F021CD84F0100F4DA09 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		11CF54179118B83A7CC9FF62 /* Pods-HCBaseSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCBaseSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCBaseSystem/Pods-HCBaseSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		11ED402B1CC694D200561E33 /* HCBaseSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCBaseSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ED402E1CC694D200561E33 /* HCBaseSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseSystem.h; sourceTree = "<group>"; };
@@ -401,6 +424,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		11754EB41CD84E4D00F4DA09 /* StrapButton */ = {
+			isa = PBXGroup;
+			children = (
+				11754EB51CD84E4D00F4DA09 /* FontAwesome.ttf */,
+				11754EB61CD84E4D00F4DA09 /* NSString+FontAwesome.h */,
+				11754EB71CD84E4D00F4DA09 /* NSString+FontAwesome.m */,
+				11754EB81CD84E4D00F4DA09 /* UIButton+Bootstrap.h */,
+				11754EB91CD84E4D00F4DA09 /* UIButton+Bootstrap.m */,
+			);
+			path = StrapButton;
+			sourceTree = "<group>";
+		};
 		11ED40211CC694D200561E33 = {
 			isa = PBXGroup;
 			children = (
@@ -598,8 +633,13 @@
 		11ED437E1CC92CFA00561E33 /* UIControls */ = {
 			isa = PBXGroup;
 			children = (
+				11754EB41CD84E4D00F4DA09 /* StrapButton */,
 				11502F4F1CD2941800365412 /* MBProgressHUD.h */,
 				11502F501CD2941800365412 /* MBProgressHUD.m */,
+				11754EAF1CD84E1B00F4DA09 /* SevenSwitch.h */,
+				11754EB01CD84E1B00F4DA09 /* SevenSwitch.m */,
+				11754F011CD84F0100F4DA09 /* HMSegmentedControl.h */,
+				11754F021CD84F0100F4DA09 /* HMSegmentedControl.m */,
 				11EFDE7B1CD24F1200DD2225 /* UIMLabel.h */,
 				11EFDE7C1CD24F1200DD2225 /* UIMLabel.m */,
 				11EFDE7D1CD24F1200DD2225 /* UIMLabelEx.h */,
@@ -701,7 +741,6 @@
 				11ED42451CC89D8A00561E33 /* HttpVideoFileResponse.h in Headers */,
 				11ED426F1CC8BF8800561E33 /* QTimespan.h in Headers */,
 				11ED42671CC8B7C100561E33 /* CMD_HeatBeat.h in Headers */,
-				11502F511CD2941800365412 /* MBProgressHUD.h in Headers */,
 				11ED424E1CC89D8A00561E33 /* VDCLoaderConnection.h in Headers */,
 				11ED42581CC89D8A00561E33 /* VDCTempFileManager(readwriter).h in Headers */,
 				11EFDE601CD1EFE200DD2225 /* iVersion.h in Headers */,
@@ -711,6 +750,11 @@
 				11ED41961CC72B0900561E33 /* CMD_0001.h in Headers */,
 				11ED420E1CC732FD00561E33 /* CMD_LOGTIME.h in Headers */,
 				11ED41071CC7285C00561E33 /* CMD_GetDownloadToken.h in Headers */,
+				11754F031CD84F0100F4DA09 /* HMSegmentedControl.h in Headers */,
+				11754EC81CD84E4D00F4DA09 /* UIButton+Bootstrap.h in Headers */,
+				11754EC51CD84E4D00F4DA09 /* NSString+FontAwesome.h in Headers */,
+				11502F511CD2941800365412 /* MBProgressHUD.h in Headers */,
+				11754EB11CD84E1B00F4DA09 /* SevenSwitch.h in Headers */,
 				11EFDE851CD24F1200DD2225 /* UIMLabelEx.h in Headers */,
 				11EFDE831CD24F1200DD2225 /* UIMLabel.h in Headers */,
 				11502F4B1CD285B300365412 /* HXNetwork.h in Headers */,
@@ -810,6 +854,7 @@
 				11EFDE691CD1F37200DD2225 /* framework.xcconfig in Resources */,
 				11ED424B1CC89D8A00561E33 /* TestDownloadViewController.xib in Resources */,
 				11EFDE6B1CD1F37200DD2225 /* HCBaseSystem.podspec in Resources */,
+				11754EC31CD84E4D00F4DA09 /* FontAwesome.ttf in Resources */,
 				11EFDE6D1CD1F37200DD2225 /* hcbasesystemappstore.xcconfig in Resources */,
 				11EFDE6F1CD1F37200DD2225 /* hcbasesystemdebug.xcconfig in Resources */,
 				11EFDE711CD1F37200DD2225 /* hcbasesystemrelease.xcconfig in Resources */,
@@ -822,6 +867,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EFDE6A1CD1F37200DD2225 /* framework.xcconfig in Resources */,
+				11754EC41CD84E4D00F4DA09 /* FontAwesome.ttf in Resources */,
 				11EFDE6C1CD1F37200DD2225 /* HCBaseSystem.podspec in Resources */,
 				11EFDE721CD1F37200DD2225 /* hcbasesystemrelease.xcconfig in Resources */,
 				11EFDE6E1CD1F37200DD2225 /* hcbasesystemappstore.xcconfig in Resources */,
@@ -889,6 +935,7 @@
 				11ED41DD1CC72BD300561E33 /* HCDBHelper(WT).m in Sources */,
 				11ED41E31CC72BD300561E33 /* UploadParameters.m in Sources */,
 				11ED41081CC7285C00561E33 /* CMD_GetDownloadToken.m in Sources */,
+				11754EB21CD84E1B00F4DA09 /* SevenSwitch.m in Sources */,
 				11ED42701CC8BF8800561E33 /* QTimespan.m in Sources */,
 				11ED42531CC89D8A00561E33 /* VDCManager(LocalFiles).m in Sources */,
 				11ED41AD1CC72B9400561E33 /* CMD_ChangeUserAvatar.m in Sources */,
@@ -910,6 +957,7 @@
 				11ED43A21CC92CFA00561E33 /* UIPlaceHolderTextField.m in Sources */,
 				11ED409D1CC7237300561E33 /* HCUserConcern.m in Sources */,
 				11ED42091CC7325E00561E33 /* HCMessageItem.m in Sources */,
+				11754EC61CD84E4D00F4DA09 /* NSString+FontAwesome.m in Sources */,
 				11EFDE861CD24F1200DD2225 /* UIMLabelEx.m in Sources */,
 				11ED43A41CC92CFA00561E33 /* UIPlaceHolderTextView.m in Sources */,
 				11ED410A1CC7285C00561E33 /* CMD_GetUploadToken.m in Sources */,
@@ -918,6 +966,7 @@
 				11ED41971CC72B0900561E33 /* CMD_0001.m in Sources */,
 				11ED409F1CC7237300561E33 /* HCUserFriend.m in Sources */,
 				11502F521CD2941800365412 /* MBProgressHUD.m in Sources */,
+				11754EC91CD84E4D00F4DA09 /* UIButton+Bootstrap.m in Sources */,
 				11ED424A1CC89D8A00561E33 /* TestDownloadViewController.m in Sources */,
 				11ED420F1CC732FD00561E33 /* CMD_LOGTIME.m in Sources */,
 				11ED40A61CC7237300561E33 /* UserInfo-Extend.m in Sources */,
@@ -928,6 +977,7 @@
 				11ED41BD1CC72B9400561E33 /* CMD_UserActivate.m in Sources */,
 				11ED41B71CC72B9400561E33 /* CMD_RegisterPushToken.m in Sources */,
 				11ED41B31CC72B9400561E33 /* CMD_Login.m in Sources */,
+				11754F041CD84F0100F4DA09 /* HMSegmentedControl.m in Sources */,
 				11ED43A61CC92CFA00561E33 /* UIWebImageViewN.m in Sources */,
 				11ED41D51CC72BD300561E33 /* CMDS_WT.m in Sources */,
 				11ED41D71CC72BD300561E33 /* CMDS_WT(base).m in Sources */,
@@ -952,7 +1002,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11754EC71CD84E4D00F4DA09 /* NSString+FontAwesome.m in Sources */,
+				11754EB31CD84E1B00F4DA09 /* SevenSwitch.m in Sources */,
+				11754ECA1CD84E4D00F4DA09 /* UIButton+Bootstrap.m in Sources */,
 				11EFDE621CD1EFE200DD2225 /* iVersion.m in Sources */,
+				11754F051CD84F0100F4DA09 /* HMSegmentedControl.m in Sources */,
 				11ED403B1CC694D200561E33 /* HCBaseSystemTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

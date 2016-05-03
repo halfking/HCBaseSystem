@@ -20,19 +20,18 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - GPUImage (0.1.7)
   - HappyDNS (0.2.3)
-  - hccoren (0.1.4):
-    - hccoren/Core (= 0.1.4)
-    - hccoren/NetworkAndDatabase (= 0.1.4)
-    - hccoren/UIControls (= 0.1.4)
+  - hccoren (0.1.5):
+    - hccoren/Core (= 0.1.5)
+    - hccoren/NetworkAndDatabase (= 0.1.5)
+    - hccoren/UIControls (= 0.1.5)
     - HCMinizip (~> 1.2.6)
-  - hccoren/Core (0.1.4):
+  - hccoren/Core (0.1.5):
     - HCMinizip (~> 1.2.6)
-  - hccoren/NetworkAndDatabase (0.1.4):
+  - hccoren/NetworkAndDatabase (0.1.5):
     - hccoren/Core
     - HCMinizip (~> 1.2.6)
-  - hccoren/UIControls (0.1.4):
+  - hccoren/UIControls (0.1.5):
     - hccoren/Core
     - HCMinizip (~> 1.2.6)
   - HCMinizip (1.2.6)
@@ -42,30 +41,22 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
-  - TuSDK (2.4.5):
-    - GPUImage (~> 0.1.6)
-  - UMengAnalytics-NO-IDFA (3.6.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
-  - hccoren (~> 0.1.4)
+  - hccoren (~> 0.1.5)
   - HCMinizip
   - Qiniu (~> 7.0)
   - SDWebImage (~> 3.7.5)
-  - TuSDK
-  - UMengAnalytics-NO-IDFA
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HappyDNS: 6d85942e64c28b4fa61f8c76580398f52d6d1d11
-  hccoren: 16fc4305c33c4e7bed83bca72c9547a996b33a78
+  hccoren: 0844d5f776eb73c19ea85bf316bd0ce8f167252b
   HCMinizip: 6a0308924c12593f23c3b949f4142a5b68acd442
   Qiniu: 2c05af1f9d580c036b18faf832cc98e98bfb21bc
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  TuSDK: 72e8998710af7207bfd172e232629cff5486dd31
-  UMengAnalytics-NO-IDFA: 6d02561a00579b2e37718f204eb81347df5d7b8b
 
-PODFILE CHECKSUM: 07df229ea631c51530afc99b7df0fda0845e3d86
+PODFILE CHECKSUM: d4e3f098ed9621aaa748d7197a4d9bf71ecaf91f
 
 COCOAPODS: 1.0.0.rc.1

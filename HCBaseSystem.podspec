@@ -140,16 +140,16 @@ s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES",
     s.subspec 'UIControls' do |spec|
         spec.requires_arc            = true
         spec.source_files = [
-            "HCBaseSystem/UIControls/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/UIControls/**/*.{h,m,mm,cpp,c}",
             "HCBaseSystem/imagecontrols.h"
         ]
         spec.exclude_files = [
             "HCBaseSystem/UIControls/LoginViewNew.{h,m,mm,cpp,c}",
             "HCBaseSystem/UIControls/ShareView.{h,m,mm,cpp,c}",
-#            "HCBaseSystem/UIControls/MBProgressHUD.{h,m,mm,cpp,c}"
+#           "HCBaseSystem/UIControls/MBProgressHUD.{h,m,mm,cpp,c}"
         ]
         spec.public_header_files = [
-            'HCBaseSystem/UIControls/*.h',
+            'HCBaseSystem/UIControls/**/*.h',
             'HCBaseSystem/imagecontrols.h'
         ]
         spec.frameworks = [

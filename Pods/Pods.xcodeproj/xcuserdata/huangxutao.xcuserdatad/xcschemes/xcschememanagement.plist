@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GPUImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>HCMinizip.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,11 +42,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>24E205E03F16405D7B532CB1937109CF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>28225759576A06A7F0C6F4B1D7413B5B</key>
 		<dict>
 			<key>primary</key>
@@ -67,12 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>55247C3C20B35494EF74434F68A05520</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6610362E50A6DE8BACCA1F2885CD9157</key>
+		<key>4623F1C2ADA396419F3AC0AF08FF6971</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A99EF01B604F1BACA969D7D31A02BDF7</key>
+		<key>FEDA55A71FACB678E8222A0050FA3116</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF36416F8800FF19C6BEB1924FF1C052</key>
 		<dict>
 			<key>primary</key>
 			<true/>
