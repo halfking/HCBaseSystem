@@ -68,6 +68,7 @@
 		11754F4C1CD872CB00F4DA09 /* Comment.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F411CD872CB00F4DA09 /* Comment.h */; };
 		11754F4D1CD872CB00F4DA09 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F421CD872CB00F4DA09 /* Comment.m */; };
 		11754F4E1CD872CB00F4DA09 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F421CD872CB00F4DA09 /* Comment.m */; };
+		11754F501CD8743A00F4DA09 /* comments_wt.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F4F1CD8743A00F4DA09 /* comments_wt.h */; };
 		11ED402F1CC694D200561E33 /* HCBaseSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED402E1CC694D200561E33 /* HCBaseSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED40361CC694D200561E33 /* HCBaseSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ED402B1CC694D200561E33 /* HCBaseSystem.framework */; };
 		11ED403B1CC694D200561E33 /* HCBaseSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED403A1CC694D200561E33 /* HCBaseSystemTests.m */; };
@@ -265,6 +266,7 @@
 		11754F401CD872CB00F4DA09 /* CMD_GetMtvComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_GetMtvComments.m; sourceTree = "<group>"; };
 		11754F411CD872CB00F4DA09 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		11754F421CD872CB00F4DA09 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		11754F4F1CD8743A00F4DA09 /* comments_wt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comments_wt.h; sourceTree = "<group>"; };
 		11CF54179118B83A7CC9FF62 /* Pods-HCBaseSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCBaseSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCBaseSystem/Pods-HCBaseSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		11ED402B1CC694D200561E33 /* HCBaseSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCBaseSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ED402E1CC694D200561E33 /* HCBaseSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseSystem.h; sourceTree = "<group>"; };
@@ -544,6 +546,7 @@
 				11ED43241CC8F31400561E33 /* UpDown.h */,
 				11ED43371CC8FC9E00561E33 /* User_WT.h */,
 				11ED43A71CC92D8600561E33 /* imagecontrols.h */,
+				11754F4F1CD8743A00F4DA09 /* comments_wt.h */,
 			);
 			path = HCBaseSystem;
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 				11ED41071CC7285C00561E33 /* CMD_GetDownloadToken.h in Headers */,
 				11754F031CD84F0100F4DA09 /* HMSegmentedControl.h in Headers */,
 				11754EC81CD84E4D00F4DA09 /* UIButton+Bootstrap.h in Headers */,
+				11754F501CD8743A00F4DA09 /* comments_wt.h in Headers */,
 				11754F1C1CD8591900F4DA09 /* OtherUserInfo.h in Headers */,
 				11754EC51CD84E4D00F4DA09 /* NSString+FontAwesome.h in Headers */,
 				11502F511CD2941800365412 /* MBProgressHUD.h in Headers */,
