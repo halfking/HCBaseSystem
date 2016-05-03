@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.1.9"
+  s.version      = "0.2.0"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -195,11 +195,13 @@ s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES",
         spec.requires_arc            = true
         spec.source_files = [
             "HCBaseSystem/VDCManager/*.{h,m,mm,cpp,c}",
+            "HCBaseSystem/vdc_f.h"
             "HCBaseSystem/vdc.h"
         ]
         spec.public_header_files = [
             "HCBaseSystem/VDCManager/*.h",
-            "HCBaseSystem/vdc.h"
+            "HCBaseSystem/vdc.h",
+            "HCBaseSystem/vdc_f.h"
         ]
         #spec.frameworks = []
         spec.ios.dependency 'HCBaseSystem/User'
@@ -215,6 +217,7 @@ s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES",
             "HCBaseSystem/comments_wt.h"
         ]
         #spec.frameworks = []
+        spec.ios.dependency 'HCBaseSystem/User'
     end
 #    s.subspec 'ShareTM' do |spec|
 #        spec.requires_arc            = true
