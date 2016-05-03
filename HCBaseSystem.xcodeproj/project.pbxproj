@@ -56,6 +56,18 @@
 		11754F1C1CD8591900F4DA09 /* OtherUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F1A1CD8591900F4DA09 /* OtherUserInfo.h */; };
 		11754F1D1CD8591900F4DA09 /* OtherUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F1B1CD8591900F4DA09 /* OtherUserInfo.m */; };
 		11754F1E1CD8591900F4DA09 /* OtherUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F1B1CD8591900F4DA09 /* OtherUserInfo.m */; };
+		11754F431CD872CB00F4DA09 /* CMD_Comment.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F3B1CD872CB00F4DA09 /* CMD_Comment.h */; };
+		11754F441CD872CB00F4DA09 /* CMD_Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F3C1CD872CB00F4DA09 /* CMD_Comment.m */; };
+		11754F451CD872CB00F4DA09 /* CMD_Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F3C1CD872CB00F4DA09 /* CMD_Comment.m */; };
+		11754F461CD872CB00F4DA09 /* CMD_DeleteComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F3D1CD872CB00F4DA09 /* CMD_DeleteComment.h */; };
+		11754F471CD872CB00F4DA09 /* CMD_DeleteComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F3E1CD872CB00F4DA09 /* CMD_DeleteComment.m */; };
+		11754F481CD872CB00F4DA09 /* CMD_DeleteComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F3E1CD872CB00F4DA09 /* CMD_DeleteComment.m */; };
+		11754F491CD872CB00F4DA09 /* CMD_GetMtvComments.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F3F1CD872CB00F4DA09 /* CMD_GetMtvComments.h */; };
+		11754F4A1CD872CB00F4DA09 /* CMD_GetMtvComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F401CD872CB00F4DA09 /* CMD_GetMtvComments.m */; };
+		11754F4B1CD872CB00F4DA09 /* CMD_GetMtvComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F401CD872CB00F4DA09 /* CMD_GetMtvComments.m */; };
+		11754F4C1CD872CB00F4DA09 /* Comment.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F411CD872CB00F4DA09 /* Comment.h */; };
+		11754F4D1CD872CB00F4DA09 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F421CD872CB00F4DA09 /* Comment.m */; };
+		11754F4E1CD872CB00F4DA09 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F421CD872CB00F4DA09 /* Comment.m */; };
 		11ED402F1CC694D200561E33 /* HCBaseSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED402E1CC694D200561E33 /* HCBaseSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED40361CC694D200561E33 /* HCBaseSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ED402B1CC694D200561E33 /* HCBaseSystem.framework */; };
 		11ED403B1CC694D200561E33 /* HCBaseSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED403A1CC694D200561E33 /* HCBaseSystemTests.m */; };
@@ -245,6 +257,14 @@
 		11754F161CD8585E00F4DA09 /* CMD_GetOtherUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_GetOtherUserInfo.m; sourceTree = "<group>"; };
 		11754F1A1CD8591900F4DA09 /* OtherUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherUserInfo.h; sourceTree = "<group>"; };
 		11754F1B1CD8591900F4DA09 /* OtherUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherUserInfo.m; sourceTree = "<group>"; };
+		11754F3B1CD872CB00F4DA09 /* CMD_Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_Comment.h; sourceTree = "<group>"; };
+		11754F3C1CD872CB00F4DA09 /* CMD_Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_Comment.m; sourceTree = "<group>"; };
+		11754F3D1CD872CB00F4DA09 /* CMD_DeleteComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_DeleteComment.h; sourceTree = "<group>"; };
+		11754F3E1CD872CB00F4DA09 /* CMD_DeleteComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_DeleteComment.m; sourceTree = "<group>"; };
+		11754F3F1CD872CB00F4DA09 /* CMD_GetMtvComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_GetMtvComments.h; sourceTree = "<group>"; };
+		11754F401CD872CB00F4DA09 /* CMD_GetMtvComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_GetMtvComments.m; sourceTree = "<group>"; };
+		11754F411CD872CB00F4DA09 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		11754F421CD872CB00F4DA09 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		11CF54179118B83A7CC9FF62 /* Pods-HCBaseSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCBaseSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCBaseSystem/Pods-HCBaseSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		11ED402B1CC694D200561E33 /* HCBaseSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCBaseSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ED402E1CC694D200561E33 /* HCBaseSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseSystem.h; sourceTree = "<group>"; };
@@ -461,6 +481,21 @@
 			path = StrapButton;
 			sourceTree = "<group>";
 		};
+		11754F3A1CD872CB00F4DA09 /* comment */ = {
+			isa = PBXGroup;
+			children = (
+				11754F3B1CD872CB00F4DA09 /* CMD_Comment.h */,
+				11754F3C1CD872CB00F4DA09 /* CMD_Comment.m */,
+				11754F3D1CD872CB00F4DA09 /* CMD_DeleteComment.h */,
+				11754F3E1CD872CB00F4DA09 /* CMD_DeleteComment.m */,
+				11754F3F1CD872CB00F4DA09 /* CMD_GetMtvComments.h */,
+				11754F401CD872CB00F4DA09 /* CMD_GetMtvComments.m */,
+				11754F411CD872CB00F4DA09 /* Comment.h */,
+				11754F421CD872CB00F4DA09 /* Comment.m */,
+			);
+			path = comment;
+			sourceTree = "<group>";
+		};
 		11ED40211CC694D200561E33 = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +525,7 @@
 		11ED402D1CC694D200561E33 /* HCBaseSystem */ = {
 			isa = PBXGroup;
 			children = (
+				11754F3A1CD872CB00F4DA09 /* comment */,
 				11EFDE5D1CD1EFE200DD2225 /* iVersion */,
 				11ED422D1CC89D8A00561E33 /* VDCManager */,
 				11ED41931CC72AEA00561E33 /* CMDEX */,
@@ -744,6 +780,7 @@
 				11ED409E1CC7237300561E33 /* HCUserFriend.h in Headers */,
 				11ED41AC1CC72B9400561E33 /* CMD_ChangeUserAvatar.h in Headers */,
 				11ED41DC1CC72BD300561E33 /* HCDBHelper(WT).h in Headers */,
+				11754F491CD872CB00F4DA09 /* CMD_GetMtvComments.h in Headers */,
 				11ED43381CC8FCE900561E33 /* User_WT.h in Headers */,
 				11ED41D81CC72BD300561E33 /* HCCallResultForWT.h in Headers */,
 				11754F121CD8582C00F4DA09 /* CMD_GetUserSummary.h in Headers */,
@@ -763,6 +800,7 @@
 				11ED410B1CC7285C00561E33 /* UDInfo.h in Headers */,
 				11ED41B81CC72B9400561E33 /* CMD_SetUserInfo.h in Headers */,
 				11ED40A51CC7237300561E33 /* UserInfo-Extend.h in Headers */,
+				11754F4C1CD872CB00F4DA09 /* Comment.h in Headers */,
 				11ED42491CC89D8A00561E33 /* TestDownloadViewController.h in Headers */,
 				11ED40A41CC7237300561E33 /* UDDelegate.h in Headers */,
 				11ED41FD1CC72F8600561E33 /* PublicEnum.h in Headers */,
@@ -782,9 +820,11 @@
 				11ED424E1CC89D8A00561E33 /* VDCLoaderConnection.h in Headers */,
 				11ED42581CC89D8A00561E33 /* VDCTempFileManager(readwriter).h in Headers */,
 				11EFDE601CD1EFE200DD2225 /* iVersion.h in Headers */,
+				11754F461CD872CB00F4DA09 /* CMD_DeleteComment.h in Headers */,
 				11ED40A01CC7237300561E33 /* HCUserSettings.h in Headers */,
 				11ED41D21CC72BD300561E33 /* CMDOP_WT.h in Headers */,
 				11ED41D41CC72BD300561E33 /* CMDS_WT.h in Headers */,
+				11754F431CD872CB00F4DA09 /* CMD_Comment.h in Headers */,
 				11ED41961CC72B0900561E33 /* CMD_0001.h in Headers */,
 				11ED420E1CC732FD00561E33 /* CMD_LOGTIME.h in Headers */,
 				11ED41071CC7285C00561E33 /* CMD_GetDownloadToken.h in Headers */,
@@ -982,6 +1022,7 @@
 				11754F1D1CD8591900F4DA09 /* OtherUserInfo.m in Sources */,
 				11ED41AD1CC72B9400561E33 /* CMD_ChangeUserAvatar.m in Sources */,
 				11ED40A81CC7237300561E33 /* UserInformation.m in Sources */,
+				11754F4D1CD872CB00F4DA09 /* Comment.m in Sources */,
 				11754F091CD857FE00F4DA09 /* CMD_LikeOrNot.m in Sources */,
 				11754F0E1CD8581700F4DA09 /* CMD_GetUserRelation.m in Sources */,
 				11ED40AA1CC7237300561E33 /* UserManager.m in Sources */,
@@ -999,6 +1040,7 @@
 				11ED41B51CC72B9400561E33 /* CMD_Register.m in Sources */,
 				11ED42071CC7325E00561E33 /* HCMessageGroup.m in Sources */,
 				11ED424D1CC89D8A00561E33 /* VDCItem.m in Sources */,
+				11754F441CD872CB00F4DA09 /* CMD_Comment.m in Sources */,
 				11ED43A21CC92CFA00561E33 /* UIPlaceHolderTextField.m in Sources */,
 				11ED409D1CC7237300561E33 /* HCUserConcern.m in Sources */,
 				11ED42091CC7325E00561E33 /* HCMessageItem.m in Sources */,
@@ -1019,6 +1061,7 @@
 				11ED41101CC7285C00561E33 /* UDManager.m in Sources */,
 				11ED41BB1CC72B9400561E33 /* CMD_UpdateIP.m in Sources */,
 				11ED42511CC89D8A00561E33 /* VDCManager(Helper).m in Sources */,
+				11754F4A1CD872CB00F4DA09 /* CMD_GetMtvComments.m in Sources */,
 				11ED41BD1CC72B9400561E33 /* CMD_UserActivate.m in Sources */,
 				11ED41B71CC72B9400561E33 /* CMD_RegisterPushToken.m in Sources */,
 				11ED41B31CC72B9400561E33 /* CMD_Login.m in Sources */,
@@ -1038,6 +1081,7 @@
 				11ED41B91CC72B9400561E33 /* CMD_SetUserInfo.m in Sources */,
 				11ED410E1CC7285C00561E33 /* UDManager(Helper).m in Sources */,
 				11ED439A1CC92CFA00561E33 /* SCGIFImageView.m in Sources */,
+				11754F471CD872CB00F4DA09 /* CMD_DeleteComment.m in Sources */,
 				11ED41DB1CC72BD300561E33 /* HCDBHelper-initWT.m in Sources */,
 				11ED42551CC89D8A00561E33 /* VDCManager.m in Sources */,
 			);
@@ -1053,10 +1097,14 @@
 				11754EC71CD84E4D00F4DA09 /* NSString+FontAwesome.m in Sources */,
 				11754EB31CD84E1B00F4DA09 /* SevenSwitch.m in Sources */,
 				11754F141CD8582C00F4DA09 /* CMD_GetUserSummary.m in Sources */,
+				11754F451CD872CB00F4DA09 /* CMD_Comment.m in Sources */,
 				11754ECA1CD84E4D00F4DA09 /* UIButton+Bootstrap.m in Sources */,
 				11754F0A1CD857FE00F4DA09 /* CMD_LikeOrNot.m in Sources */,
 				11EFDE621CD1EFE200DD2225 /* iVersion.m in Sources */,
+				11754F481CD872CB00F4DA09 /* CMD_DeleteComment.m in Sources */,
+				11754F4B1CD872CB00F4DA09 /* CMD_GetMtvComments.m in Sources */,
 				11754F051CD84F0100F4DA09 /* HMSegmentedControl.m in Sources */,
+				11754F4E1CD872CB00F4DA09 /* Comment.m in Sources */,
 				11ED403B1CC694D200561E33 /* HCBaseSystemTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

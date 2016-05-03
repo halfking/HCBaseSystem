@@ -58,6 +58,12 @@ FOUNDATION_EXPORT const unsigned char HCBaseSystemVersionString[];
 #import <HCBaseSystem/CMD_GetUserRelation.h>
 #import <HCBaseSystem/CMD_GetUserSummary.h>
 #import <HCBaseSystem/CMD_GetOtherUserInfo.h>
+
+#import <HCBaseSystem/Comment.h>
+#import <HCBaseSystem/CMD_Comment.h>
+#import <HCBaseSystem/CMD_DeleteComment.h>
+#import <HCBaseSystem/CMD_GetMtvComments.h>
+
 //#import <HCBaseSystem/UPloadRecord.h>
 //#import <HCBaseSystem/MTVUploader.h>
 //#import <HCBaseSystem/MBMTV.h>
