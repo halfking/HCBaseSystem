@@ -70,7 +70,7 @@
 		11754F4E1CD872CB00F4DA09 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F421CD872CB00F4DA09 /* Comment.m */; };
 		11754F501CD8743A00F4DA09 /* comments_wt.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F4F1CD8743A00F4DA09 /* comments_wt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11754F731CD87F6B00F4DA09 /* vdc_f.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F721CD87F6B00F4DA09 /* vdc_f.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11754F841CD8802800F4DA09 /* SNAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F801CD8802800F4DA09 /* SNAlertView.h */; };
+		11754F841CD8802800F4DA09 /* SNAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F801CD8802800F4DA09 /* SNAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11754F851CD8802800F4DA09 /* SNAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F811CD8802800F4DA09 /* SNAlertView.m */; };
 		11754F861CD8802800F4DA09 /* SNAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11754F811CD8802800F4DA09 /* SNAlertView.m */; };
 		11754F871CD8802800F4DA09 /* UIAlertView+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 11754F821CD8802800F4DA09 /* UIAlertView+Blocks.h */; };
@@ -167,8 +167,6 @@
 		11ED424B1CC89D8A00561E33 /* TestDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11ED42341CC89D8A00561E33 /* TestDownloadViewController.xib */; };
 		11ED424C1CC89D8A00561E33 /* VDCItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42351CC89D8A00561E33 /* VDCItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED424D1CC89D8A00561E33 /* VDCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42361CC89D8A00561E33 /* VDCItem.m */; };
-		11ED424E1CC89D8A00561E33 /* VDCLoaderConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42371CC89D8A00561E33 /* VDCLoaderConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11ED424F1CC89D8A00561E33 /* VDCLoaderConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42381CC89D8A00561E33 /* VDCLoaderConnection.m */; };
 		11ED42501CC89D8A00561E33 /* VDCManager(Helper).h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42391CC89D8A00561E33 /* VDCManager(Helper).h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED42511CC89D8A00561E33 /* VDCManager(Helper).m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED423A1CC89D8A00561E33 /* VDCManager(Helper).m */; };
 		11ED42521CC89D8A00561E33 /* VDCManager(LocalFiles).h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED423B1CC89D8A00561E33 /* VDCManager(LocalFiles).h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -177,10 +175,6 @@
 		11ED42551CC89D8A00561E33 /* VDCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED423E1CC89D8A00561E33 /* VDCManager.m */; };
 		11ED42561CC89D8A00561E33 /* VDCTempFileInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED423F1CC89D8A00561E33 /* VDCTempFileInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED42571CC89D8A00561E33 /* VDCTempFileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42401CC89D8A00561E33 /* VDCTempFileInfo.m */; };
-		11ED42581CC89D8A00561E33 /* VDCTempFileManager(readwriter).h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42411CC89D8A00561E33 /* VDCTempFileManager(readwriter).h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11ED42591CC89D8A00561E33 /* VDCTempFileManager(readwriter).m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42421CC89D8A00561E33 /* VDCTempFileManager(readwriter).m */; };
-		11ED425A1CC89D8A00561E33 /* VDCTempFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42431CC89D8A00561E33 /* VDCTempFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11ED425B1CC89D8A00561E33 /* VDCTempFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42441CC89D8A00561E33 /* VDCTempFileManager.m */; };
 		11ED42671CC8B7C100561E33 /* CMD_HeatBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED42651CC8B7C100561E33 /* CMD_HeatBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11ED42681CC8B7C100561E33 /* CMD_HeatBeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED42661CC8B7C100561E33 /* CMD_HeatBeat.m */; };
 		11ED426F1CC8BF8800561E33 /* QTimespan.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED426D1CC8BF8800561E33 /* QTimespan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -375,8 +369,6 @@
 		11ED42341CC89D8A00561E33 /* TestDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestDownloadViewController.xib; sourceTree = "<group>"; };
 		11ED42351CC89D8A00561E33 /* VDCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCItem.h; sourceTree = "<group>"; };
 		11ED42361CC89D8A00561E33 /* VDCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCItem.m; sourceTree = "<group>"; };
-		11ED42371CC89D8A00561E33 /* VDCLoaderConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCLoaderConnection.h; sourceTree = "<group>"; };
-		11ED42381CC89D8A00561E33 /* VDCLoaderConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCLoaderConnection.m; sourceTree = "<group>"; };
 		11ED42391CC89D8A00561E33 /* VDCManager(Helper).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VDCManager(Helper).h"; sourceTree = "<group>"; };
 		11ED423A1CC89D8A00561E33 /* VDCManager(Helper).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VDCManager(Helper).m"; sourceTree = "<group>"; };
 		11ED423B1CC89D8A00561E33 /* VDCManager(LocalFiles).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VDCManager(LocalFiles).h"; sourceTree = "<group>"; };
@@ -385,10 +377,6 @@
 		11ED423E1CC89D8A00561E33 /* VDCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCManager.m; sourceTree = "<group>"; };
 		11ED423F1CC89D8A00561E33 /* VDCTempFileInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCTempFileInfo.h; sourceTree = "<group>"; };
 		11ED42401CC89D8A00561E33 /* VDCTempFileInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCTempFileInfo.m; sourceTree = "<group>"; };
-		11ED42411CC89D8A00561E33 /* VDCTempFileManager(readwriter).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VDCTempFileManager(readwriter).h"; sourceTree = "<group>"; };
-		11ED42421CC89D8A00561E33 /* VDCTempFileManager(readwriter).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VDCTempFileManager(readwriter).m"; sourceTree = "<group>"; };
-		11ED42431CC89D8A00561E33 /* VDCTempFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCTempFileManager.h; sourceTree = "<group>"; };
-		11ED42441CC89D8A00561E33 /* VDCTempFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCTempFileManager.m; sourceTree = "<group>"; };
 		11ED42601CC8A2D500561E33 /* configForApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configForApp.h; sourceTree = "<group>"; };
 		11ED42651CC8B7C100561E33 /* CMD_HeatBeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD_HeatBeat.h; sourceTree = "<group>"; };
 		11ED42661CC8B7C100561E33 /* CMD_HeatBeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD_HeatBeat.m; sourceTree = "<group>"; };
@@ -710,8 +698,6 @@
 				11ED42341CC89D8A00561E33 /* TestDownloadViewController.xib */,
 				11ED42351CC89D8A00561E33 /* VDCItem.h */,
 				11ED42361CC89D8A00561E33 /* VDCItem.m */,
-				11ED42371CC89D8A00561E33 /* VDCLoaderConnection.h */,
-				11ED42381CC89D8A00561E33 /* VDCLoaderConnection.m */,
 				11ED42391CC89D8A00561E33 /* VDCManager(Helper).h */,
 				11ED423A1CC89D8A00561E33 /* VDCManager(Helper).m */,
 				11ED423B1CC89D8A00561E33 /* VDCManager(LocalFiles).h */,
@@ -720,10 +706,6 @@
 				11ED423E1CC89D8A00561E33 /* VDCManager.m */,
 				11ED423F1CC89D8A00561E33 /* VDCTempFileInfo.h */,
 				11ED42401CC89D8A00561E33 /* VDCTempFileInfo.m */,
-				11ED42411CC89D8A00561E33 /* VDCTempFileManager(readwriter).h */,
-				11ED42421CC89D8A00561E33 /* VDCTempFileManager(readwriter).m */,
-				11ED42431CC89D8A00561E33 /* VDCTempFileManager.h */,
-				11ED42441CC89D8A00561E33 /* VDCTempFileManager.m */,
 			);
 			path = VDCManager;
 			sourceTree = "<group>";
@@ -837,12 +819,9 @@
 				11ED42561CC89D8A00561E33 /* VDCTempFileInfo.h in Headers */,
 				11ED42501CC89D8A00561E33 /* VDCManager(Helper).h in Headers */,
 				11ED42521CC89D8A00561E33 /* VDCManager(LocalFiles).h in Headers */,
-				11ED425A1CC89D8A00561E33 /* VDCTempFileManager.h in Headers */,
 				11ED42451CC89D8A00561E33 /* HttpVideoFileResponse.h in Headers */,
 				11ED426F1CC8BF8800561E33 /* QTimespan.h in Headers */,
 				11ED42671CC8B7C100561E33 /* CMD_HeatBeat.h in Headers */,
-				11ED424E1CC89D8A00561E33 /* VDCLoaderConnection.h in Headers */,
-				11ED42581CC89D8A00561E33 /* VDCTempFileManager(readwriter).h in Headers */,
 				11EFDE601CD1EFE200DD2225 /* iVersion.h in Headers */,
 				11ED40A01CC7237300561E33 /* HCUserSettings.h in Headers */,
 				11ED41D21CC72BD300561E33 /* CMDOP_WT.h in Headers */,
@@ -859,7 +838,6 @@
 				11754F171CD8585E00F4DA09 /* CMD_GetOtherUserInfo.h in Headers */,
 				11754F461CD872CB00F4DA09 /* CMD_DeleteComment.h in Headers */,
 				11754F431CD872CB00F4DA09 /* CMD_Comment.h in Headers */,
-				11754F841CD8802800F4DA09 /* SNAlertView.h in Headers */,
 				11754F501CD8743A00F4DA09 /* comments_wt.h in Headers */,
 				11754F1C1CD8591900F4DA09 /* OtherUserInfo.h in Headers */,
 				11754F081CD857FE00F4DA09 /* CMD_LikeOrNot.h in Headers */,
@@ -870,6 +848,7 @@
 				11EFDE831CD24F1200DD2225 /* UIMLabel.h in Headers */,
 				11502F4B1CD285B300365412 /* HXNetwork.h in Headers */,
 				11ED41DA1CC72BD300561E33 /* HCDBHelper-initWT.h in Headers */,
+				11754F841CD8802800F4DA09 /* SNAlertView.h in Headers */,
 				11754F731CD87F6B00F4DA09 /* vdc_f.h in Headers */,
 				11ED42081CC7325E00561E33 /* HCMessageItem.h in Headers */,
 				11ED42121CC7333E00561E33 /* CMDLog.h in Headers */,
@@ -1043,7 +1022,6 @@
 			files = (
 				11ED40A11CC7237300561E33 /* HCUserSettings.m in Sources */,
 				11754F181CD8585E00F4DA09 /* CMD_GetOtherUserInfo.m in Sources */,
-				11ED42591CC89D8A00561E33 /* VDCTempFileManager(readwriter).m in Sources */,
 				11ED41D31CC72BD300561E33 /* CMDOP_WT.m in Sources */,
 				11ED41DD1CC72BD300561E33 /* HCDBHelper(WT).m in Sources */,
 				11ED41E31CC72BD300561E33 /* UploadParameters.m in Sources */,
@@ -1065,8 +1043,6 @@
 				11ED43961CC92CFA00561E33 /* HPTextViewInternal.m in Sources */,
 				11ED43941CC92CFA00561E33 /* HPGrowingTextView.m in Sources */,
 				11ED40A31CC7237300561E33 /* HCUserSummary.m in Sources */,
-				11ED425B1CC89D8A00561E33 /* VDCTempFileManager.m in Sources */,
-				11ED424F1CC89D8A00561E33 /* VDCLoaderConnection.m in Sources */,
 				11ED41E11CC72BD300561E33 /* ResponseEntity.m in Sources */,
 				11754F131CD8582C00F4DA09 /* CMD_GetUserSummary.m in Sources */,
 				11ED41B51CC72B9400561E33 /* CMD_Register.m in Sources */,

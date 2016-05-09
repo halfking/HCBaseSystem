@@ -16,7 +16,7 @@
 #import "VDCManager(LocalFiles).h"
 #import "VDCManager(Helper).h"
 #import <hccoren/HCFileManager.h>
-#import "VDCLoaderConnection.h"
-#import "VDCTempFileManager(readwriter).h"
-#import "VDCTempFileManager.h"
+//#import "VDCLoaderConnection.h"
+//#import "VDCTempFileManager(readwriter).h"
+//#import "VDCTempFileManager.h"
 #endif /* vdc_h */
