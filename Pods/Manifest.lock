@@ -21,17 +21,17 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - HappyDNS (0.2.3)
-  - hccoren (0.2.3):
-    - hccoren/Core (= 0.2.3)
-    - hccoren/NetworkAndDatabase (= 0.2.3)
-    - hccoren/UIControls (= 0.2.3)
+  - hccoren (0.2.5):
+    - hccoren/Core (= 0.2.5)
+    - hccoren/NetworkAndDatabase (= 0.2.5)
+    - hccoren/UIControls (= 0.2.5)
     - HCMinizip (~> 1.2.6)
-  - hccoren/Core (0.2.3):
+  - hccoren/Core (0.2.5):
     - HCMinizip (~> 1.2.6)
-  - hccoren/NetworkAndDatabase (0.2.3):
+  - hccoren/NetworkAndDatabase (0.2.5):
     - hccoren/Core
     - HCMinizip (~> 1.2.6)
-  - hccoren/UIControls (0.2.3):
+  - hccoren/UIControls (0.2.5):
     - hccoren/Core
     - HCMinizip (~> 1.2.6)
   - HCMinizip (1.2.6)
@@ -44,7 +44,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
-  - hccoren (~> 0.2.3)
+  - hccoren (~> 0.2.5)
   - HCMinizip
   - Qiniu (~> 7.0)
   - SDWebImage (~> 3.7.5)
@@ -52,11 +52,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   HappyDNS: 6d85942e64c28b4fa61f8c76580398f52d6d1d11
-  hccoren: 28092537797abc5b03f6ad74770a4da77f1bd6d6
+  hccoren: d636a8d0cef31728a3598eece6e5ed9a7dfb99b6
   HCMinizip: 6a0308924c12593f23c3b949f4142a5b68acd442
   Qiniu: 2c05af1f9d580c036b18faf832cc98e98bfb21bc
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 
-PODFILE CHECKSUM: ee7497ba2b2484dff816743b34bf30b677565e64
+PODFILE CHECKSUM: 987995e1ec5cda521fc0574eba3f805dbe60a188
 
 COCOAPODS: 1.0.0.rc.2
