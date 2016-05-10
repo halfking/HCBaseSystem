@@ -109,7 +109,7 @@ s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES",
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
     s.dependency "HCMinizip"
-    s.dependency "hccoren"
+    s.dependency "hccoren",'~>0.2.4'
     s.dependency "Qiniu", "~> 7.0"
     s.dependency "SDWebImage", "~>3.7.5"
     s.dependency "AFNetworking", "~>2.6.3"
