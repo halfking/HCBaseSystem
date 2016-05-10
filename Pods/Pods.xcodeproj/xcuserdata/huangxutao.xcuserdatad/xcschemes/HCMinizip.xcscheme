@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '436ADAC3D73BE014432375FE458F8325'
+               BlueprintIdentifier = '1DF352478BB8A1C68D8624102BB504C3'
                BlueprintName = 'HCMinizip'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libHCMinizip.a'>
