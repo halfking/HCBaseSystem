@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.2.9"
+  s.version      = "0.3.3"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
@@ -21,18 +21,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
-
-  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the authors of the library, with email addresses. Email addresses
-  #  of the authors are extracted from the SCM log. E.g. $ git log. CocoaPods also
-  #  accepts just a name if you'd rather not provide an email address.
-  #
-  #  Specify a social_media_url where others can refer to, for example a twitter
-  #  profile URL.
-  #
-
-  s.author             = { "halfking" => "kimmy.huang@gmail.com" }
+    s.author             = { "halfking" => "kimmy.huang@gmail.com" }
   # Or just: s.author    = ""
   # s.authors            = { "" => "" }
   # s.social_media_url   = "http://twitter.com/"
@@ -62,18 +51,6 @@ Pod::Spec.new do |s|
 s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag => s.version,:submodules => true  }
 #s.source       = { :git => "http://github.com/halfking/hcbasesystem.git", :tag => s.version }
 
-  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
-  #
-
-# s.source_files  = "hccoren", "hccoren/**/regexkitlite.{h,m,mm}"
-#  s.exclude_files = "hccoren/Exclude"
-
-#s.public_header_files = "hccoren/**/regexkitlite.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -105,7 +82,7 @@ s.source       = { :git => "https://github.com/halfking/hcbasesystem.git", :tag 
   # s.requires_arc = false
 
 s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES","ENABLE_BITCODE" => "YES","DEFINES_MODULE" => "YES"}
-#,"HEADER_SEARCH_PATHS" => "$(inherited) $(PROJECT_DIR)/Lib","LIBRARY_SEARCH_PATHS" => "$(inherited) $(PROJECT_DIR)/Lib"}
+
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
     s.dependency "HCMinizip"
@@ -218,17 +195,4 @@ s.xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES",
         #spec.frameworks = []
         spec.ios.dependency 'HCBaseSystem/User'
     end
-#    s.subspec 'ShareTM' do |spec|
-#        spec.requires_arc            = true
-#        spec.source_files = [
-#            "HCBaseSystem/TM/*.{h,m,mm,cpp,c}",
-#            "HCBaseSystem/Share/*.{h,m,mm,cpp,c}"
-#        ]
-#        spec.public_header_files = [
-#            "HCBaseSystem/TM/*.h",
-#            "HCBaseSystem/Share/*.h"
-#        ]
-#        #spec.frameworks = []
-#        spec.ios.dependency 'HCBaseSystem/User'
-#    end
  end
