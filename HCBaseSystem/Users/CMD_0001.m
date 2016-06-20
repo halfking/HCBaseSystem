@@ -20,7 +20,7 @@
     {
         CMDID_ = 1;
         useHttpSender_ = YES;
-        isPost_ = NO;
+        isPost_ = YES;
     }
     return self;
 }
