@@ -71,11 +71,13 @@ typedef void (^DRCOMPLETED)(BOOL completed);
 
 #pragma mark - 评分相关的检查
 -(BOOL) isFirstLoad;
+-(BOOL) isFirstLoad:(NSString *)type;
 -(BOOL) isFirstEdit;
 -(BOOL) needVote;
 -(void) VoteLater;
 -(void) markHaveSungOneSong:(float)score;
 -(void) markAsLoaded;
+- (void) markAsLoaded:(NSString *)type;
 -(void) markAsVoted;
 -(void) markAsEdited;
 - (BOOL)needRate:(long)sampleID;

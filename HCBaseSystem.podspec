@@ -9,10 +9,11 @@
 Pod::Spec.new do |s|
 
   s.name         = "HCBaseSystem"
-  s.version      = "0.3.8"
+  s.version      = "0.3.9"
   s.summary      = "这是一个与分享、推送、上传下载及用户、命令等的核心库。"
   s.description  = <<-DESC
 这是一个特定的核心库。包含了常用的分享、命令、推送、上传、下载、及用户管理器。简化了外部引用的一些问题。
+0.3.9   增加IsFirstLoad:(NString *)type 函数，用于记录指定的操作是否第一次进行
                    DESC
 
   s.homepage     = "https://github.com/halfking/HCBaseSystem"

@@ -1118,6 +1118,17 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
 -(BOOL) isFirstLoad{
     return ![userDefaults_ boolForKey:@"isNotFirstOpen"];
 }
+- (BOOL) isFirstLoad:(NSString *)type
+{
+    if(!type||type.length==0)
+    {
+        return [self isFirstLoad];
+    }
+    else
+    {
+       return ![userDefaults_ boolForKey:[NSString stringWithFormat:@"%@-%@",@"isNotFirstOpen",type]];
+    }
+}
 -(BOOL) isFirstEdit
 {
     return ![userDefaults_ boolForKey:@"isNotFirstEdit"];
@@ -1230,6 +1241,17 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UserManager)
 -(void) markAsLoaded
 {
     [userDefaults_ setBool:YES forKey:@"isNotFirstOpen"];
+}
+- (void) markAsLoaded:(NSString *)type
+{
+    if(!type||type.length==0)
+    {
+        [self markAsLoaded];
+    }
+    else
+    {
+        [userDefaults_ setBool:YES forKey:[NSString stringWithFormat:@"%@-%@",@"isNotFirstOpen",type]];
+    }
 }
 -(void) markAsEdited
 {
