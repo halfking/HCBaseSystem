@@ -556,6 +556,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UDManager)
     __block CGFloat lastPostPercent = -1;
     __weak UDManager * weakSelf = self;
     __weak UDInfo * weakItem = item;
+    @synchronized (self) {
+        item.Status = 1;
+    }
     
     QNUploadOption *opt = [[QNUploadOption alloc] initWithMime:nil /*[self getMimeType:item.LocalFilePath]*/
                                                progressHandler:^(NSString *key, float percent)
@@ -957,6 +960,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_NEW(UDManager)
     }
     NSString *downloadPath = item.LocalFilePath;
     
+    @synchronized (self) {
+        item.Status = 1;
+    }
     
     __block UDInfo * currentItem = item;
     
