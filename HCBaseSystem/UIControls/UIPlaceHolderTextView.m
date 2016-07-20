@@ -13,6 +13,8 @@
 @synthesize placeholder;
 @synthesize placeholderColor;
 @synthesize placeholderFont;
+@synthesize placeholderTextAlignment;
+
 - (void)dealloc
 {
 #ifdef TRACKPAGES
@@ -28,6 +30,7 @@
     PP_RELEASE(placeholderFont);
     [placeHolderLabel release]; placeHolderLabel = nil;
     [placeholderColor release]; placeholderColor = nil;
+    [placeholderTextAlignment release];placeholderTextAlignment = nil;
     [placeholder release]; placeholder = nil;
     [super dealloc];
 #endif
@@ -39,6 +42,7 @@
     [super awakeFromNib];
     [self setPlaceholder:@""];
     [self setPlaceholderColor:[UIColor lightGrayColor]];
+    [self setPlaceholderTextAlignment:NSTextAlignmentLeft];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:UITextViewTextDidChangeNotification object:nil];
 }
 
@@ -55,6 +59,7 @@
 #endif
         [self setPlaceholder:@""];
         [self setPlaceholderColor:[UIColor lightGrayColor]];
+        [self setPlaceholderTextAlignment:NSTextAlignmentLeft];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:UITextViewTextDidChangeNotification object:nil];
     }
     return self;
@@ -94,13 +99,25 @@
             placeHolderLabel.font = placeholderFont?placeholderFont: self.font;
             placeHolderLabel.backgroundColor = [UIColor clearColor];
             placeHolderLabel.textColor = self.placeholderColor;
+            placeHolderLabel.textAlignment = self.placeholderTextAlignment;
             placeHolderLabel.alpha = 0;
             placeHolderLabel.tag = 999;
             [self addSubview:placeHolderLabel];
         }
         
         placeHolderLabel.text = self.placeholder;
-        [placeHolderLabel sizeToFit];
+        
+        if (placeHolderLabel.textAlignment == NSTextAlignmentLeft) {
+            [placeHolderLabel sizeToFit];
+        } else {
+            UIFont * fontLbl = placeholderFont?placeholderFont:self.font;
+            NSDictionary *attribute = @{NSFontAttributeName: fontLbl};
+            CGSize sizeLbl = [placeholder boundingRectWithSize:CGSizeMake(placeHolderLabel.frame.size.width, self.frame.size.height) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+            CGRect frameLbl = placeHolderLabel.frame;
+            frameLbl.size.height = sizeLbl.height;
+            placeHolderLabel.frame = frameLbl;
+        }
+        
         [self sendSubviewToBack:placeHolderLabel];
     }
     

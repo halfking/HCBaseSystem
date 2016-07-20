@@ -21,5 +21,6 @@
 @property (nonatomic, retain) NSString *placeholder;
 @property (nonatomic, retain) UIColor *placeholderColor;
 @property (nonatomic,retain) UIFont * placeholderFont;
+@property (nonatomic, assign) NSTextAlignment placeholderTextAlignment;
 -(void)textChanged:(NSNotification*)notification;
 @end
